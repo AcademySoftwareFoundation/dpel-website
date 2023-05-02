@@ -1,0 +1,78 @@
+---
+/** 
+ * This file is the home page.
+ * Contains text for the top of the page that is not in markdown
+ */
+
+// Layout Imports
+import MainLayout from "../layout/MainLayout.astro"
+import HomePageNews from "../layout/HomePageNews.astro"
+
+// Styles
+import "../styles/global.css"
+
+// Component imports
+import Card from "../component/Card.astro"
+
+// Utils
+import { sortCards } from "../utils/sortCards"
+
+// Markdown imports
+const assetCards = await Astro.glob("../content/articles/*.md")
+const sortedAssetCards = sortCards(assetCards)
+
+// Urls
+const aswfURL= "http://aswf.io" 
+const licenseURL= "https://aswf.io/licenses/aswf_digital_assets_license_v1.1.txt"
+const slackURL= "https://slack.aswf.io/"
+const mailingListURL= "https://lists.aswf.io/g/assets-discussion"
+---
+
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" type="image/svg+xml" href="/public/images/general/dpel-icon-black.svg" />
+		<meta name="viewport" content="width=device-width" />
+		<meta name="generator" content={Astro.generator} />
+		<title>DPEL: Digital Production Example Library</title>
+	</head>
+	<MainLayout>
+		<div class="container mx-auto px-10">
+			<div class="main-section relative">
+				<div class="relative m-0 flex-auto">
+					<b><h1 class="mb-8 text-center">DPEL</h1></b>
+					<h2 class="mt-9 mb-9 text-center">Digital Production Example Library</h2>
+					<div class="main-text text-center">
+						<p>A library of <strong>digital assets</strong> - 3D scenes, digital cinema footage,
+							etc. - that demonstrate the <strong>scale</strong> and <strong>complexity</strong>
+							of modern feature film production, including computer graphics, visual
+							effects and animation. Curated by the <a href={aswfURL} target="_blank" rel="noreferrer noopener">Academy
+							Software Foundation</a>, these assets are available free of charge to
+							<strong>researchers</strong> and <strong>developers</strong> of both
+							open source and commercial projects, to <strong>test, demonstrate, and
+							inspire</strong> their ideas. See our <a href={licenseURL} target="_blank" rel="noreferrer noopener">license
+							template</a>. You can find us on <a href={slackURL} target="_blank" rel="noreferrer noopener">Slack</a> at #assets, 
+							or on our <a href={mailingListURL} target="_blank" rel="noreferrer noopener">mailing list</a>.
+						</p>
+					</div>
+				</div>
+				<div class="news-section relative text-center mt-16">
+					<HomePageNews />
+				</div>
+			</div>
+
+			<section class="asset-section pb-36" aria-label="Assets">
+				<div class="asset-container">
+					<h2 class="text-center pb-10">Assets</h2>
+					{
+						sortedAssetCards.map((card) => (
+							<Card
+								frontmatter={card.frontmatter}
+							/>
+						))
+					}
+				</div>
+			</section>
+		</div>
+	</MainLayout>
+</html>

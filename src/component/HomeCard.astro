@@ -1,0 +1,37 @@
+---
+/** 
+ * HOME CARD ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ *  
+ * This component is used on the home page mainly under News.
+ * The card contains information for New Assets and Other Assets.
+ * 
+ * ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ */
+
+// Data of the card.
+const { frontmatter } = Astro.props
+const {title, description, link} = frontmatter
+---
+
+<div class="homecard col-span-1">
+  <h3 class="mb-5 blue">{title}</h3>
+  <p>
+    <span>{description}</span>
+    <a href={link.url} target="_blank" rel="noreferrer noopener">{link.text}</a>
+  </p>
+</div>
+
+<style>
+  .homecard {
+    background: #FFFFFF;
+    box-shadow: 0px 0px 15px rgb(0 0 0 / 15%) !important;
+    padding: 35px;
+  }
+  .homecard p {
+    font-weight: 100;
+    line-height: 20px;
+  }
+  .homecard p a {
+    font-weight: 600;
+  }
+</style>
