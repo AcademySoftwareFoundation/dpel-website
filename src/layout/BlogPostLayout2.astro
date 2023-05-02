@@ -1,0 +1,174 @@
+---
+/** 
+ * This Layout is for the Noa asset page.
+ */
+
+// Components
+import Button from "../component/Button.astro";
+import Breadcrumbs from "../component/Breadcrumbs.astro";
+
+// Styles
+import '../styles/global.css'
+
+// Data from markdown
+const { frontmatter } = Astro.props;
+const {title, coverImage, imageCaption, otherImages, titleAlt, filmLink, extraHeaderContent, includedContentTop, includedContentBottom, credits, downloadSection} = frontmatter;
+---
+<header class="pb-28 mt-20 text-center">
+  
+  <Breadcrumbs titleAlt={titleAlt} />
+  <div class="header-content px-12">
+    <div class="pb-10">
+      <Button text="DPEL HOME PAGE" url="/" type="primary" />
+    </div>
+    <h2>{title}</h2>
+    <p class="post-image-caption text-center py-12 desktop:mx-12 tablet:mx-5">{imageCaption.text}</p>
+    <img class="w-full" src={coverImage.src} alt={coverImage.alt} />
+
+    <p class="py-10"><a href={filmLink.url}>{filmLink.text}</a></p>
+
+    <div class="extra-header-content">
+      <b>{extraHeaderContent.subtext}</b>
+      <p>{extraHeaderContent.description}</p>
+      <p class="pb-5">{extraHeaderContent.extraDescription}</p>
+
+      <b>{extraHeaderContent.secondSubtext}</b> {extraHeaderContent.secondDescription}
+
+      <p class="pt-12 pb-6 font-bold">{downloadSection.subtext}</p>
+      <Button text={downloadSection.licenseButtonText} type="primary" url={downloadSection.licenseButtonLink} />
+      { downloadSection.downloads.map((download) => (
+        <Button text={download.buttonText} type="primary" url={download.downloadUrl} />
+      ))}
+    </div>
+  </div>
+</header>
+
+<div class="post-content-preview container mx-auto px-20 pb-20">
+  <h3 class="pb-5">{includedContentTop.title}</h3>
+  <ul class="pl-3">
+    {includedContentTop.contentList.map((item) => {
+      if ( item.children ) {
+        return (
+          <li>{item.text}</li>
+          <ul>
+            { item.childrenText.map((child) => (
+              <li class="pl-5">{child}</li>
+            ))}
+          </ul>
+        )
+      } else {
+        return (<li>{item.text}</li>)
+      }
+    })}
+  </ul>
+  <p class="pt-8 pb-3"><i>{includedContentTop.note}</i></p>
+  {includedContentTop.fileNotes.map(file => (
+    <p class="pt-7"><b>{file.subtitle}</b></p>
+    <p>{file.description}</p>
+  ))}   
+</div>
+<div class="post-content container mx-auto px-10">
+  <div class="post-content-images mb-32 grid desktop:grid-cols-3 tablet:grid-cols-3 mobile-h:grid-cols-1 mobile-v:grid-cols-1">
+    <div class="col-span-1"><img src={otherImages[0]} /></div>
+    <div class="col-span-2"><img class="pl-8 pb-5" src={otherImages[1]} />
+      <img class="pl-8" src={otherImages[2]} /></div>
+  </div>
+  <div class="post-content-bottom container text-left mobile-h:px-5 mobile-v:px-5">
+    <h3 class="text-left">{ includedContentBottom.title }</h3>
+
+    {includedContentBottom.contentList.map((content) => (
+      <p class="py-5"><b>{content.subtitle}</b></p>
+      <ul class="pl-3">
+        {content.list.map((item) => {
+          if ( item.children ) {
+            return (
+              <li>{item.text}</li>
+              <ul>
+                { item.childrenText.map((child) => {
+                  // if (child.includes('➔')){
+                  //   console.log("child has:: ", child)
+                  //   const arrowSymbol = String.fromCharCode(9654);
+                  //   const text = child;
+                  //   const replacedText = text.replace('ar', arrowSymbol);
+                  //   console.log(replacedText);
+                  // //   return ( <li class="pl-5">{replacedText}</li> )
+                  // }
+                  return ( <li class="pl-5">{child.text1} {child.text2 ? (<text><text>&#8594;</text>{child.text2}</text>): null} </li> )
+                })} 
+              </ul>
+            )
+          } else {
+            return (<li>{item.text}</li>)
+          }
+        })}
+      </ul>
+      ) 
+    )}
+  </div>
+  <div class="post-content-credits pt-10">
+    <p>{credits.subtitle}</p>
+    {credits.list.map(credit => (
+      <p>{credit}</p>
+    ))}
+  </div>
+  <slot />
+</div>
+
+<style>
+.header-content {
+  background-image: url("../../public/images/general/dpel-icon-faded.svg");
+  background-position: center;
+  background-color: #FFFFFF;
+  background-size: cover;
+}
+
+.post-content-preview ul, .post-content-bottom ul {
+  list-style-type: disc;
+  list-style-position: inside;
+  line-height: 20px;
+}
+
+.post-content p, .post-image-caption {
+  font-family: "Titillium Web", "Open Sans", sans-serif !important;
+  font-size: 20px;
+  font-weight: 300;
+  line-height: 28px;
+}
+
+.post-content h3, .post-content-preview h3{
+  font-size: 33px;
+  line-height: 35px;
+}
+
+.post-content-download {
+  font-family: 'Open Sans', Helvetica, sans-serif !important;
+}
+.post-content-download h2 {
+  font-weight: 700 !important;
+  letter-spacing: 1px;
+}
+.post-content-download p {
+  font-size: 15px !important;
+  font-weight: 300;
+}
+
+.post-content-download .download-info {
+  font-size: 18px !important;
+  line-height: 24px;
+  color: #606060 !important;
+}
+
+.post-content-bottom p, .post-content-credits p {
+  font-size: 15px;
+}
+
+.post-content-bottom p, .post-content-credits p:first-child {
+  font-weight: bold;
+}
+
+.post-content-credits p:not(:first-child) {
+  font-family: 'Open Sans', Helvetica, sans-serif !important;
+  font-weight: 400;
+}
+
+</style>

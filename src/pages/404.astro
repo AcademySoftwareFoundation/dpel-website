@@ -1,0 +1,43 @@
+---
+/** 
+ * This file is the 404 page.
+ */
+
+import MainLayout from "../layout/MainLayout.astro";
+import "../styles/global.css"
+import Button from "../component/Button.astro";
+
+---
+<MainLayout>
+  <div class="error-page">
+    <h1 class="pb-20">404</h1>
+    <h2 class="pt-5 pb-10">Page Not Found</h2>
+    <Button type="secondary" text="Back Home" url="/" />
+  </div>
+</MainLayout>
+
+<style>
+  h1{
+    font-size: 17em;
+  }
+
+  h2 {
+    font-size: 54px;
+    font-weight: 700;
+  }
+
+  h1, h2 {
+    color: #252525;
+  }
+
+  .error-page{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+</style>

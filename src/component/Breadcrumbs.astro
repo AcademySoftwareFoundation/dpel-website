@@ -1,0 +1,94 @@
+---
+/** 
+ * BREADCRUMBS ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ *  
+ * This component is in the top section of the blog page.
+ * 
+ * It is a secondary navigation aid that helps users easily 
+ * understand the relation between their location on a page
+ * vs higher level pages.  It is denoted and looks like this:
+ *  Home > Blog title > License Page title
+ * 
+ * ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ */
+
+ // Import this data from the layout.
+const { titleAlt, blogTitleAlt } = Astro.props
+
+// Grabs the path from the browser and splits it per / 
+const paths = Astro.url.pathname.split('/').filter(x => x);
+let parts = [
+  {
+    text: 'Home',
+    href: '/',
+    'aria-current': Astro.url?.pathname === '/' ? 'page' : undefined
+  }
+];
+
+/** 
+ * Calculates which text to show depending if the user 
+ * provides text for the page or not. 
+ * */
+paths.forEach((text, i) => {
+  const href = `/${paths.slice(0, i + 1).join('/')}`;
+  const formatText = (text, i) => {
+    if (i === 0 && text !== blogTitleAlt && paths.length === 2) {
+      return blogTitleAlt;
+    } else if (i === 0 && text !== titleAlt && paths.length === 2) {
+      const formattedText = text.replace("-", " ")
+      const capitalizeText = formattedText.split(" ")
+                                      .map((word) => { return word.charAt(0).toUpperCase()+word.substring(1) }).join(" ")
+      return capitalizeText;
+    } else if (i === 1 && text !== titleAlt) {
+      return titleAlt;
+    } else if (i === 0 && text !== titleAlt && paths.length === 1) {
+      return titleAlt;
+    } else {
+      return text;
+    }
+  }
+  
+
+  // Push the text to the final result
+  parts.push({ text: formatText(text, i), 
+              href, 
+              'aria-current': Astro.url.pathname === href ? 'page' : undefined })
+})
+
+---
+
+<nav aria-label="Breadcrumb" class="breadcrumb text-left pb-10 pl-10">
+  <ol class="breadcrumbs" role="list">
+    { 
+      parts.map(({ text, ...attrs }) => 
+          <li class="breadcrumb" role="listitem">
+            <a {...attrs}>{text}</a>
+          </li>
+    )}
+  </ol>
+</nav>
+
+<style>
+nav.breadcrumb ol {
+  margin: 0;
+  padding-left: 0;
+  list-style: none;
+  border: 0;
+  vertical-align: baseline;
+}
+nav.breadcrumb li {
+  display: inline;
+  color: #5aafc6;
+  font-weight: 100;
+}
+nav.breadcrumb li + li::before {
+  display: inline-block;
+  margin: 0 0.2em;
+  color: #000;
+  content: "»";
+}
+nav.breadcrumb [aria-current="page"] {
+  color: #000;
+  text-decoration: none;
+}
+</style>

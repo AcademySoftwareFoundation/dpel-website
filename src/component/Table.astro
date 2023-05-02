@@ -1,0 +1,44 @@
+---
+/** 
+ * TABLE ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ *  
+ * This component is used on the blog page for the download table.
+ * 
+ * ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ */
+
+// For the download buttons
+import Button from "./Button.astro";
+// Data for the table
+const { downloadData } = Astro.props;
+---
+
+<table class="text-left w-full desktop:table-fixed tablet:table-fixed table-auto">
+  <tbody>
+    { 
+      downloadData.map(item => (
+        <tr>
+          <td class="pl-2 pr-5 py-5">
+            <Button text={item.buttonText} type={item.type ? item.type : 'primary'} url={item.downloadUrl} />
+          </td> 
+          <td class="pl-4 pr-4">{item.size}</td>   
+          <td class="pl-4 pr-5">
+            {item.description} {item.descriptionBold ? 
+              ( <text><b>{item.descriptionBold}</b>{item.extraDescription}</text> ) : null} 
+          </td>
+        </tr>
+      ))
+    }
+  </tbody>
+</table>
+
+<style>
+  table {
+    border: 1px solid #000000;
+    color: #000000;
+  }
+  td {
+    border: 1px solid #000000;
+    background: #FFFFFF;
+  }
+</style>
