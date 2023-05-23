@@ -1,0 +1,16 @@
+---
+import LicenseLayout from "../../../layout/LicenseLayout.astro";
+import MainLayout from "../../../layout/MainLayout.astro";
+const licenseContent = await Astro.glob("../../../content/license/alab-trailer-license.md");
+---
+<MainLayout>
+  <div class="pb-32 container mx-auto">
+    {
+      licenseContent.map(license => (
+      <LicenseLayout 
+        frontmatter={license.frontmatter}
+        url={license.url}
+      />
+    ))}
+  </div>
+</MainLayout>

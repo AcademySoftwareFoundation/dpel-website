@@ -1,0 +1,17 @@
+---
+import MainLayout from "../../layout/MainLayout.astro";
+import BlogPostLayout from "../../layout/BlogPostLayout.astro";
+
+const assetContent = await Astro.glob("../../content/articles/alab.md");
+---
+
+<MainLayout>
+  <div class="pb-32 container mx-auto">
+    {
+      assetContent.map(asset => (
+      <BlogPostLayout 
+        frontmatter={asset.frontmatter}
+      />
+    ))}
+  </div>
+</MainLayout>
