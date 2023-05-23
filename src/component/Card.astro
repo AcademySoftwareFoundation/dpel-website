@@ -1,0 +1,52 @@
+---
+/** 
+ * CARD ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ *  
+ * This component is used on the home page mainly under Assets.
+ * The card contains information on surface level of the project.
+ * 
+ * ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ */
+
+import Button from "./Button.astro";
+import "../styles/global.css"
+const { frontmatter, url } = Astro.props;
+const {show, title, description, descriptionLinks, cardImage, cardBtnVisible, buttons} = frontmatter;
+---
+{show && (
+  <article class="card w-full grid gap-5 desktop:grid-cols-5 tablet:grid-cols-5 mobile-h:grid-cols-1 mobile-v:grid-cols-1 mb-20">
+    <div class="desktop:col-span-2 tablet:col-span-2 mobile-h:col-span-1 mobile-v:col-span-1">
+      <a href={url} aria-hidden="true" tabindex="-1">
+        <img class="w-full" src={cardImage.src} alt={cardImage.alt}/>
+      </a>
+    </div>
+    <div class="desktop:col-span-3 tablet:col-span-3 mobile-h:col-span-1 mobile-v:col-span-1">
+      <h3 class="mb-10">{title}</h3>
+      <p class="mb-8 desktop:pr-5 tablet:pr-5">{description} { descriptionLinks && ( <a href={descriptionLinks.url}>{descriptionLinks.text}</a> )}</p>
+      <div>
+        {
+          buttons.map((button) => (
+            <Button
+              frontmatter={button.frontmatter}
+              type={button.type ? button.type : "primary"}
+              text={button.text} 
+              url={button.url} 
+              visible={cardBtnVisible}
+            />
+          ))
+        }
+      </div>
+    </div>
+  </article>
+)}
+
+<style>
+  .card h3 {
+    font-size: 38px;
+    line-height: 48px;
+  }
+  .card p {
+    font-weight: 400;
+    line-height: 20px;
+  }
+</style>

@@ -1,0 +1,120 @@
+---
+/** 
+ * This Layout is for ASC Stem 2 page.
+ */
+import Breadcrumbs from "../component/Breadcrumbs.astro";
+import Button from "../component/Button.astro";
+import Table from "../component/Table.astro";
+import '../styles/global.css'
+import LicenseLayout from "./LicenseLayout.astro";
+import { BASE_URL } from "../utils/constants";
+
+const { frontmatter } = Astro.props;
+const {title, titleAlt, coverImage, imageCaption, otherImages, downloadSection, licenseContent, licenseConditions, licenseDisclaimer} = frontmatter;
+---
+
+<>
+  <header class="px-10 pb-20 mt-20 text-center">
+    <Breadcrumbs titleAlt={titleAlt} />
+    <div class="header-post-content">
+      <h2 class="pb-5">{title}</h2>
+      <div class="pt-10 pb-16">
+        <Button text="STEM2 HOME PAGE" url="https://theasc.com/society/stem2" type="primary" />
+        <Button text="DPEL HOME PAGE" url={BASE_URL} type="primary" />
+      </div>
+      <img class="w-full" src={`${BASE_URL}${coverImage.src}`} alt={coverImage.alt} />
+      <p class="post-image-caption text-center py-12 px-10">
+        {imageCaption.text}{ imageCaption.textLinks && ( <a href={imageCaption.textLinks[0].link}>{imageCaption.textLinks[0].text}</a> )} {imageCaption.extraText && imageCaption.extraText} { imageCaption.textLinks && ( <a href={imageCaption.textLinks[1].link}>{imageCaption.textLinks[1].text}</a> )}
+      </p>
+    </div>
+  </header>
+  <div class="post-content container mx-auto px-10">
+    <div class="post-content-images pb-20 grid gap-5 desktop:grid-cols-2 tablet:grid-cols-2 mobile-h:grid-cols-1 mobile-v:grid-cols-1">
+      { otherImages &&
+        otherImages.map(image => (
+          <img class="w-full h-full" src={`${BASE_URL}${image}`} />
+        ))
+      }
+    </div>
+    <div class="post-content-download container mx-auto desktop:px-40 tablet:px-40 mobile-h:px-5 mobile-v:px-5 text-center">
+      <h2 class="pb-5">{downloadSection.title}</h2>
+
+    </div>
+    <div class="license mt-16 p-10">
+      <p class="pb-6 desktop:ml-16 tablet:ml-16 mobile-h:ml-10 callout-text justify-self-center">{downloadSection.subtext}</p>
+      {<LicenseLayout 
+        frontmatter={{licenseContent, licenseConditions, licenseDisclaimer, hideButtons: true}}
+        url={''}
+      />}
+    </div>
+    <p class="download-info pt-24 desktop:mx-40 pb-10">For large downloads, it is recommended to use a command-line tool
+      such as <strong>wget</strong> or <strong>curl</strong>. In most
+      browsers, you can right-mouse on the download link to copy the URL. Then
+      open a Command or Terminal window, and run the command <strong>wget
+      &lt;URL&gt;</strong>, or <strong>curl -L -O &lt;URL&gt;</strong>, where &lt;URL&gt; is
+      replaced with the download link.  To resume an interrupted download, try
+      <strong>wget -c &lt;URL&gt;</strong> or <strong>curl -L -O -C -
+      &lt;URL&gt;</strong>.
+    </p>
+    {
+      downloadSection.downloads.map((data) => {
+        return (<div class="table-header mt-5"><h3 class="text-left pb-7">{data.tableHeader}</h3>
+        <Table downloadData={data.downloadsList} /></div>)
+      })
+    }
+    
+  </div>
+</>
+<style>
+
+.header-post-content{
+  background-image: url("../../public/images/general/dpel-icon-faded.svg");
+  background-position: center;
+  background-color: #FFFFFF;
+  background-size: cover;
+}
+.title {
+  font-size: 45px;
+  color: #333333;
+  line-height: 54px;
+  text-align: center;
+  margin-top: 35px;
+  margin-bottom: 70px;
+  font-weight: 600;
+}
+.post-content-download h2 {
+  font-size: 45px;
+  font-weight: 700 !important;
+  letter-spacing: 1px;
+}
+.license {
+  background-color: #f6f6f6;
+  color: #444 !important;
+}
+.callout-text {
+    border: 2px solid #606060;
+    font-weight: 600 !important;
+    text-transform: uppercase;
+    display: inline-block;
+    padding: 10px;
+    margin-bottom: 35px !important;
+}
+.download-info {
+  font-size: 18px !important;
+  line-height: 24px;
+  color: #606060 !important;
+}
+
+.table-header h3, .post-image-caption{
+  font-family: "Titillium Web", "Open Sans", sans-serif !important;
+}
+
+.table-header h3 {
+  font-size: 33px;
+}
+.post-image-caption {
+  font-size: 20px;
+  line-height: 25px;
+  font-weight: 300;
+}
+</style>

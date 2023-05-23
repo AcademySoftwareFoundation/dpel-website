@@ -1,0 +1,19 @@
+update to home page image paths
+
+Signed-off-by: Cecilia Tran <cecilia.tran@dreamworks.com>
+
+# Please enter the commit message for your changes. Lines starting
+# with '#' will be ignored, and an empty message aborts the commit.
+# On branch main
+# Changes to be committed:
+#   (use "git reset HEAD^1 <file>..." to unstage)
+#
+#	modified:   src/content/articles/alab.md
+#	modified:   src/content/articles/asc-stem2.md
+#	modified:   src/content/articles/dpel-coming-soon.md
+#	modified:   src/content/articles/intel-cloud-library.md
+#	modified:   src/content/articles/noa.md
+#	new file:   src/images/alab/DPELDownload2.jpg
+#	new file:   src/images/alab/DPELDownload4.jpg
+#	new file:   src/images/alab/alab-image001.gif
+#
