@@ -1,0 +1,94 @@
+---
+/** 
+ * BUTTONS ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ *  
+ * This component is used for any button click functionality.
+ * There are 3 different styles/states:
+ * 
+ *  1.) primary: Rounded sides button ( this is the default state )
+ *    _____________    
+ * (   button text   )
+ *    _____________
+ *  
+ *  2.) secondary: Square button 
+ *    _____________    
+ * [   button text   ]
+ *    _____________   
+ * 
+ *  3.) disabled: the button will be a grey background
+ *      and not clickable.
+ * 
+ * ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ */
+
+ import {BASE_URL} from '../utils/constants' //Keep this for relative path changes
+
+const { text, cardBtnVisible, type, url } = Astro.props;
+
+const checkUrl = (url) => {
+  const splitUrl = url.split(':').includes('https');
+  if (!splitUrl && !url.includes("/dpel-website/")) {
+    url = BASE_URL + url
+  }
+  return url;
+}
+const updatedUrl = checkUrl(url)
+---
+
+<a 
+  class={`button ${type}`}
+  style={{visible: cardBtnVisible}} 
+  href={updatedUrl}>
+    <slot>{text}</slot>
+</a>
+
+<!-- Styles -->
+<style>
+  a.button {
+    margin-right: 20px;
+    color: rgb(255, 255, 255);
+    visibility: visible;
+    border-radius: 30px;
+    padding: 8px 44px;
+    background-color: #5aafc6;
+    transition: opacity .45s cubic-bezier(0.25,1,0.33,1),
+                transform .45s cubic-bezier(0.25,1,0.33,1),
+                border-color .45s cubic-bezier(0.25,1,0.33,1),color .45s cubic-bezier(0.25,1,0.33,1),
+                background-color .45s cubic-bezier(0.25,1,0.33,1),
+                box-shadow .45s cubic-bezier(0.25,1,0.33,1);
+    font-size: 14px;
+    letter-spacing: 1px;
+    cursor: pointer;
+    margin-bottom: 10px;
+    display: inline-block;
+  }
+
+/** For round oval blue button */
+  a.button.primary {
+    border-radius: 30px;
+    padding: 8px 44px;
+  }
+
+/** For square blue button */
+  a.button.secondary {
+    border-radius: 5px;
+    padding: 15px 22px;
+    font-weight: 600 !important;
+  }
+
+/** For disabled state ( greyed out ) */
+  a.button.disabled {
+    background-color: #c4c4c4 !important;
+    border-radius: 30px;
+    padding: 8px 44px;
+    pointer-events: none;
+  }
+
+/** For hover state */
+  a.button:hover{
+    box-shadow: 0 20px 38px rgba(0,0,0,0.16);
+    -webkit-transform: translateY(-3px);
+    opacity: .87;
+    color: #FFFFFF;
+  }  
+</style>

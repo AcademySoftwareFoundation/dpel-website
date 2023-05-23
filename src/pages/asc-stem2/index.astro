@@ -1,0 +1,16 @@
+---
+import ASCStem2Layout from "../../layout/ASCStem2Layout.astro";
+import MainLayout from "../../layout/MainLayout.astro";
+const assetContent = await Astro.glob("../../content/articles/asc-stem2.md");
+---
+
+<MainLayout>
+  <div class="pb-32 container mx-auto">
+    {
+      assetContent.map(asset => (
+      <ASCStem2Layout
+        frontmatter={asset.frontmatter}
+      />
+    ))}
+  </div>
+</MainLayout>

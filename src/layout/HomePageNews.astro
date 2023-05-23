@@ -1,0 +1,26 @@
+---
+/** 
+ * This Layout is for the cards in the Home page under news section.
+ */
+
+// Component imports
+import HomeCard from "../component/HomeCard.astro";
+
+// Markdown imports
+const newsContent = await Astro.glob("../content/homecards/*.md");
+---
+
+<section class="news-section pb-16" aria-label="News">
+  <div class="news-container flex-auto flex-column">
+    <h2 class="pb-10">News</h2>
+    <div class="news-cards grid gap-7 desktop:grid-cols-2 tablet:grid-cols-2 mobile-v:grid-cols-1 mobile-h:grid-cols-1">
+      {
+        newsContent.map((news) => (
+          <HomeCard
+            frontmatter={news.frontmatter}
+          />
+        ))
+      }
+    </div>
+  </div>
+</section>

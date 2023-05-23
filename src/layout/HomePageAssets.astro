@@ -1,0 +1,24 @@
+---
+/** 
+ * This Layout is for the cards in the Home page under assets section.
+ */
+
+// Component imports
+import Card from "../component/Card.astro"
+
+// Markdown imports
+const assetCards = await Astro.glob("../content/articles/*.md");
+---
+
+<section class="asset-section pb-36" aria-label="Assets">
+  <div class="asset-container">
+    <h2 class="text-center pb-10">Assets</h2>
+    {
+      assetCards.map((card) => (
+        <Card
+          frontmatter={card.frontmatter}
+        />
+      ))
+    }
+  </div>
+</section>
