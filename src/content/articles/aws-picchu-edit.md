@@ -11,14 +11,14 @@ show: true
 order: 7
 # Image for the project card
 cardImage: {
-  src: "./images/picchu/picchuEdit_picchuStill.png",
+  src: "./images/aws-picchu-edit/aws-picchu-edit-still.png",
   alt: "AWS Picchu Edit title card",
 }
 # The buttons that will show up on the project card
 buttons: [
   {
     text: "DOWNLOADS PAGE",
-    url: "picchu",
+    url: "aws-picchu-edit",
     type: "primary"
   },
 ]
@@ -47,7 +47,7 @@ titleAlt: "AWS Picchu Edit"
 url: "picchu"
 # The cover image of the blog page
 coverImage: {
-  src: "./images/picchu/picchuEdit_picchuStill.png",
+  src: "./images/aws-picchu-edit/aws-picchu-edit-still.png",
   alt: "AWS Picchu Edit still image",
 }
 # The image caption under the cover image
@@ -80,14 +80,14 @@ imageCaption: {
 # The extra image gallery
 # [] []
 # [] []
-otherImages: ["/images/picchu/picchuEdit_daVinciResolve.png", "/images/picchu/picchuEdit_OTIO_Raven.png"]
+otherImages: ["/images/aws-picchu-edit/aws-picchu-edit-davinci-resolve.png", "/images/aws-picchu-edit/aws-picchu-edit-otio-raven.png"]
 
 # The download section of the blog
 downloadSection: {
   title: "Downloadable Packages:",
   subtext: "By downloading any of these files, you agree to the terms of the license linked below.",
   licenseButtonText: "ASWF Asset License",
-  licenseButtonLink: "picchu/picchu-license",
+  licenseButtonLink: "aws-picchu-edit/aws-picchu-edit-license",
   # This header is only if the table needs a header < Please see Intel page for example of that >
   downloadTableHeader: "",
 

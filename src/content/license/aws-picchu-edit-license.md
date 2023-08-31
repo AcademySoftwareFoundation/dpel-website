@@ -10,8 +10,8 @@ blogTitleAlt: "AWS Picchu Edit"
 
 # Links for the buttons: Back and Home
 homePageUrl: "/dpel-website/"
-previousPageUrl: "/dpel-website/picchu"
-nextPageUrl: "/dpel-website/picchu/picchu-license"
+previousPageUrl: "/dpel-website/aws-picchu-edit"
+nextPageUrl: "/dpel-website/aws-picchu-edit/aws-picchu-edit-license"
 
 # License text. Each sentence is broken up by commas.
 licenseContent: [
