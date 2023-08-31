@@ -72,7 +72,7 @@ imageCaption: {
     link: "https://www.youtube.com/watch?v=vKSaF8NvMiQ"
   },
   {
-    text: "DaVinci Resolve 17",
+    text: "DaVinci Resolve Studio 17",
     link: "https://www.blackmagicdesign.com/products/davinciresolve"
   }]
 }
@@ -96,7 +96,7 @@ downloadSection: {
     buttonText: "DOWNLOAD",
     downloadUrl: "TODO",
     size: "3.72 GB",
-    description: "DaVinci Resolve 17 Project (24 fps 4096 x 2048 H.264 video, WAV audio)",
+    description: "DaVinci Resolve Studio 17 Project (24 fps 4096 x 2048 H.264 video, WAV audio)",
     type: "primary"
   },
   {
