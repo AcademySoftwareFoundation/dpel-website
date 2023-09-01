@@ -96,21 +96,21 @@ downloadSection: {
     buttonText: "DOWNLOAD",
     downloadUrl: "TODO",
     size: "3.72 GB",
-    description: "DaVinci Resolve Studio 17 Project (24 fps 4096 x 2048 H.264 video, WAV audio)",
+    description: "DaVinci Resolve Studio 17 Project (24 fps 4096 x 2048 H.264 video, WAV audio). *Note: Some media omitted due to licensing restrictions.",
     type: "primary"
   },
   {
     buttonText: "DOWNLOAD",
     downloadUrl: "TODO",
     size: "2.88 GB",
-    description: "Rendered MP4 video file (24 fps 4096 x 2048 H.264 video, AAC audio)",
+    description: "Rendered MP4 video file (24 fps 4096 x 2048 H.264 video, AAC audio). *Note: Some audio omitted due to licensing restrictions.",
     type: "primary"
   },
   {
     buttonText: "DOWNLOAD",
     downloadUrl: "TODO",
     size: "2.01 GB",
-    description: "OpenTimelineIO OTIOZ with embedded media (24 fps 4096 x 2048 H.264 video, WAV audio)",
+    description: "OpenTimelineIO OTIOZ with embedded media (24 fps 4096 x 2048 H.264 video, WAV audio). *Note: Some media omitted due to licensing restrictions.",
     type: "primary"
   },
   {
