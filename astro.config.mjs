@@ -4,8 +4,7 @@ import tailwind from "@astrojs/tailwind";
 
 // https://astro.build/config
 export default defineConfig({
-  site: 'https://academysoftwarefoundation.github.io',
-  base: '/dpel-website',
+  site: 'https://dpel.aswf.io',
   // Will setup any new pages to be unpublished till draft is done
   markdown: {
     drafts: true,

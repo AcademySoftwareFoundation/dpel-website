@@ -12,4 +12,4 @@
  * 
  */
 
-export const BASE_URL = "/dpel-website/";
+export const BASE_URL = "";
