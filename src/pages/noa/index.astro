@@ -7,13 +7,13 @@ import BlogPostLayout2 from "../../layout/BlogPostLayout2.astro";
 const assetContent = await Astro.glob("../../content/articles/noa.md");
 ---
 
-<MainLayout>
+<MainLayout title="DPEL - AWS Noa Character">
   <div class="pb-32 container mx-auto">
     {
       assetContent.map(asset => (
-      <BlogPostLayout2 
+        <BlogPostLayout2 
         frontmatter={asset.frontmatter}
       />
-    ))}
+      ))}
   </div>
 </MainLayout>

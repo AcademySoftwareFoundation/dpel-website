@@ -3,14 +3,15 @@ import LicenseLayout from "../../../layout/LicenseLayout.astro";
 import MainLayout from "../../../layout/MainLayout.astro";
 const intelLicenseContent = await Astro.glob("../../../content/license/intel-volumetric-clouds-license.md");
 ---
-<MainLayout>
+
+<MainLayout title="Intel Volumetric Clouds License - DPEL">
   <div class="pb-32 container mx-auto">
     {
       intelLicenseContent.map(license => (
-      <LicenseLayout 
+        <LicenseLayout 
         frontmatter={license.frontmatter}
         url={license.url}
       />
-    ))}
+      ))}
   </div>
 </MainLayout>

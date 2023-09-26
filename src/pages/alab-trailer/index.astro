@@ -5,13 +5,13 @@ import BlogPostLayout from "../../layout/BlogPostLayout.astro";
 const assetContent = await Astro.glob("../../content/articles/alab-trailer.md");
 ---
 
-<MainLayout>
+<MainLayout title="ALab Trailer - DPEL">
   <div class="pb-32 container mx-auto">
     {
       assetContent.map(asset => (
-      <BlogPostLayout
+        <BlogPostLayout
         frontmatter={asset.frontmatter}
       />
-    ))}
+      ))}
   </div>
 </MainLayout>
