@@ -78,7 +78,7 @@ otherImages: [
 # The download section of the blog
 downloadSection: {
   title: "Downloadable Packages:",
-  subtext: "By downloading any of these files, you agree to the terms of the license linked below.",
+  subtext: "By downloading any of these files, you agree to the terms of this license:",
   licenseButtonText: "ASWF Asset License",
   # This header is only if the table needs a header < Please see Intel page for example of that >
   downloadTableHeader: "",
