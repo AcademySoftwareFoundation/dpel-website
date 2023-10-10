@@ -27,7 +27,7 @@ const { text, cardBtnVisible, type, url } = Astro.props;
 
 const checkUrl = (url) => {
   const splitUrl = url.split(':').includes('https');
-  if (!splitUrl && !url.includes("/dpel-website/")) {
+  if (!splitUrl && !url.includes("/")) {
     url = BASE_URL + url
   }
   return url;

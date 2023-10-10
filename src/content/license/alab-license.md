@@ -9,9 +9,9 @@ titleAlt: "ALab License"
 blogTitleAlt: "ALab"
 
 # Links for the buttons: Back and Home
-homePageUrl: "/dpel-website/"
-previousPageUrl: "/dpel-website/alab"
-nextPageUrl: "/dpel-website/alab/alab-license"
+homePageUrl: "/"
+previousPageUrl: "/alab"
+nextPageUrl: "/alab/alab-license"
 
 # License text. Each sentence is broken up by commas.
 licenseContent: [

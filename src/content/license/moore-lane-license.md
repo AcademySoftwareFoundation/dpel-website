@@ -4,9 +4,9 @@ title: "ASWF Digital Assets License v1.1"
 titleAlt: "Moore Lane License"
 blogTitleAlt: "4004 Moore Lane"
 
-homePageUrl: "/dpel-website/"
-previousPageUrl: "/dpel-website/4004-moore-lane"
-nextPageUrl: "/dpel-website/4004-moore-lane/moore-lane-license"
+homePageUrl: "/"
+previousPageUrl: "/4004-moore-lane"
+nextPageUrl: "/4004-moore-lane/moore-lane-license"
 
 licenseContent: [
   'License for 4004 Moore Lane – USD Scene from Intel® (the "Asset Name").',

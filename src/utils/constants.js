@@ -3,7 +3,7 @@
  * Do not delete this file. 
  * This file is used to append onto to any URLs on the site.
  * 
- * Setting "/dpel-website/" as the value is to accommodate for the Github Pages deployment that don't use DPEL's own URL.
+ * Setting "/" as the value is to accommodate for the Github Pages deployment that don't use DPEL's own URL.
  * If using DPEL's own URL, set this to empty ("").
  * 
  * This would essentially append whatever needs to append in front of the image paths, site urls, and button urls.
@@ -12,4 +12,4 @@
  * 
  */
 
-export const BASE_URL = "/dpel-website/";
+export const BASE_URL = "";
