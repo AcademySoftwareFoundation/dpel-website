@@ -8,7 +8,7 @@ show: true
 order: 3
 # Image for the project card
 cardImage: {
-  src: "./images/noa/noa_render_02.png",
+  src: "../images/noa/noa_render_02.png",
   alt: "AWS Noa Character"
 }
 # The buttons that will show up on the project card
@@ -35,7 +35,7 @@ titleAlt: "AWS Noa Character"
 url: "noa"
 # The cover image of the blog page
 coverImage: {
-  src: "images/noa/noa_marketing_sunset_wallpaper_05_ultrawide_noLogo.png",
+  src: "../images/noa/noa_marketing_sunset_wallpaper_05_ultrawide_noLogo.png",
   alt: "AWS Noa Character",
 }
 # The image caption under the cover image
@@ -69,9 +69,9 @@ extraHeaderContent: {
 # [] []
 # [] []
 otherImages: [ 
-  "images/noa/noa_render_06-1-1.png", 
-  "images/noa/noa_render_02.png",
-  "images/noa/noa_Spanner_207_v01-1.png"]
+  "../images/noa/noa_render_06-1-1.png",
+  "../images/noa/noa_render_02.png",
+  "../images/noa/noa_Spanner_207_v01-1.png"]
 
 includedContentTop: {
   title: "What's Included",

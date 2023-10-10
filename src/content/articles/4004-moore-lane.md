@@ -8,7 +8,7 @@ show: true
 order: 6
 # Image for the project card
 cardImage: {
-  src: "./images/4004/render_20181.jpeg",
+  src: "../images/4004/render_20181.jpeg",
   alt: "4004 Moore Lane main image",
 }
 # The buttons that will show up on the project card
@@ -39,7 +39,7 @@ titleAlt: "4004 Moore Lane"
 url: "4004-moore-lane"
 # The cover image at the top of the blog
 coverImage: {
-  src: "images/4004/render_20181.jpeg",
+  src: "../images/4004/render_20181.jpeg",
   alt: "4004 Moore Lane",
 }
 # The image caption under the cover image
@@ -65,10 +65,10 @@ imageCaption: {
 # [] []
 # [] []
 otherImages: [
-  "images/4004/4004ExteriorBanner-1.jpg",
-  "images/4004/render_0131.jpeg",  
-  "images/4004/render_0812.jpeg",
-  "images/4004/render_0542.jpeg"]
+  "../images/4004/4004ExteriorBanner-1.jpg",
+  "../images/4004/render_0131.jpeg",
+  "../images/4004/render_0812.jpeg",
+  "../images/4004/render_0542.jpeg"]
 
 # The download section of the blog
 downloadSection: {
