@@ -4,9 +4,9 @@ title: "ASWF Digital Assets License v1.1"
 titleAlt: "AWS Noa Character License"
 blogTitleAlt: "AWS Noa Character"
 
-homePageUrl: "/dpel-website/"
-previousPageUrl: "/dpel-website/noa"
-nextPageUrl: "/dpel-website/noa/aws-noa-license"
+homePageUrl: "/"
+previousPageUrl: "/noa"
+nextPageUrl: "/noa/aws-noa-license"
 licenseContent: [
   'License for AWS Noa Character (the "Asset Name").',
   "AWS Noa Character Copyright 2022 Amazon Web Services. All rights reserved.",

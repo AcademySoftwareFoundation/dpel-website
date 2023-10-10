@@ -4,9 +4,9 @@ title: "ASWF Digital Assets License v1.1"
 titleAlt: "ALab License"
 blogTitleAlt: "ALab Trailer"
 
-homePageUrl: "/dpel-website/"
-previousPageUrl: "/dpel-website/alab-trailer"
-nextPageUrl: "/dpel-website/alab-trailer/alab-trailer-license"
+homePageUrl: "/"
+previousPageUrl: "/alab-trailer"
+nextPageUrl: "/alab-trailer/alab-trailer-license"
 
 licenseContent: [
   'License for Animal Logic ALab (the "Asset Name").',

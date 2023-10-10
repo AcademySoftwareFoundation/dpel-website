@@ -4,9 +4,9 @@ title: "ASWF Digital Assets License v1.1"
 titleAlt: "Intel Volumetric Clouds License"
 blogTitleAlt: "Intel Volumetric Clouds Library"
 
-homePageUrl: "/dpel-website/"
-previousPageUrl: "/dpel-website/intel-cloud-library"
-nextPageUrl: "/dpel-website/intel-cloud-library/intel-volumetric-clouds-license"
+homePageUrl: "/"
+previousPageUrl: "/intel-cloud-library"
+nextPageUrl: "/intel-cloud-library/intel-volumetric-clouds-license"
 
 licenseContent: [
   'License for Intel® Volumetric Clouds Library (the "Asset Name").',
