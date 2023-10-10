@@ -11,7 +11,7 @@ show: false
 order: 7
 # Image for the project card
 cardImage: {
-  src: "./images/general/cropped-dpel-stacked-black.png",
+  src: "../images/general/cropped-dpel-stacked-black.png",
   alt: "",
 }
 # The buttons that will show up on the project card

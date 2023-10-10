@@ -8,7 +8,7 @@ show: true
 order: 1
 # Image for the project card
 cardImage: {
-  src: "./images/StEM2/StEM2-still-1-1.png",
+  src: "../images/StEM2/StEM2-still-1-1.png",
   alt: "Stem 2 still image",
 }
 # The buttons that will show up on the project card
@@ -44,7 +44,7 @@ titleAlt: "Standard Evaluation Material 2"
 url: "asc-stem2"
 # The cover image at the top of the blog
 coverImage: {
-  src: "images/StEM2/vlcsnap-2021-12-03-15h26m41s477-1024x403.png",
+  src: "../images/StEM2/vlcsnap-2021-12-03-15h26m41s477-1024x403.png",
   alt: "ASC Stem 2",
 }
 # The image caption under the cover image
@@ -70,10 +70,10 @@ imageCaption: {
 # [] []
 # [] []
 otherImages: [
-  "images/StEM2/vlcsnap-2021-12-03-15h27m16s208-1.png", 
-  "images/StEM2/vlcsnap-2021-12-03-15h27m23s452-1.png", 
-  "images/StEM2/vlcsnap-2021-12-03-15h41m16s094-1.png", 
-  "images/StEM2/StEM2-still-1-1.png"]
+  "../images/StEM2/vlcsnap-2021-12-03-15h27m16s208-1.png",
+  "../images/StEM2/vlcsnap-2021-12-03-15h27m23s452-1.png",
+  "../images/StEM2/vlcsnap-2021-12-03-15h41m16s094-1.png",
+  "../images/StEM2/StEM2-still-1-1.png"]
 
 # The download section of the blog
 downloadSection: {

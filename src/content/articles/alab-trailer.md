@@ -8,7 +8,7 @@ show: true
 order: 5
 # Image for the project card
 cardImage: {
-  src: "./images/alab-trailer/alab-trailer-main.png",
+  src: "../images/alab-trailer/alab-trailer-main.png",
   alt: "ALAB trailer main image",
 }
 # The buttons that will show up on the project card
@@ -44,7 +44,7 @@ titleAlt: "ALab Trailer"
 url: "alab-trailer"
 # The cover image at the top of the blog
 coverImage: {
-  src: "images/alab-trailer/alab-trailer-main.png",
+  src: "../images/alab-trailer/alab-trailer-main.png",
   alt: "ALAB trailer main image",
 }
 # The image caption under the cover image
@@ -79,10 +79,10 @@ imageCaption: {
 # [] []
 # [] []
 otherImages: [
-  "images/alab-trailer/ezgif.com-gif-maker.gif", 
-  "images/alab-trailer/ezgif.com-gif-maker-3.gif", 
-  "images/alab-trailer/alab-trailer-4.png", 
-  "images/alab-trailer/alab-trailer-5.png"
+  "../images/alab-trailer/ezgif.com-gif-maker.gif",
+  "../images/alab-trailer/ezgif.com-gif-maker-3.gif",
+  "../images/alab-trailer/alab-trailer-4.png",
+  "../images/alab-trailer/alab-trailer-5.png"
 ]
 
 # The download section of the blog

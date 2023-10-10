@@ -8,7 +8,7 @@ show: true
 order: 4
 # Image for the project card
 cardImage: {
-  src: "./images/intel-clouds/intel-cloud.jpeg",
+  src: "../images/intel-clouds/intel-cloud.jpeg",
   alt: "Intel® Volumetric Cloud Library",
 }
 # The buttons that will show up on the project card
@@ -39,7 +39,7 @@ titleAlt: "Intel Volumetric Cloud Library"
 url: "intel-cloud-library"
 # The cover image of the blog page
 coverImage: {
-  src: "images/intel-clouds/intel-cloud.jpeg",
+  src: "../images/intel-clouds/intel-cloud.jpeg",
   alt: "Intel cloud library",
 }
 # The image caption under the cover image

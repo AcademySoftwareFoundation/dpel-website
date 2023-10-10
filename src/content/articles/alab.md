@@ -8,7 +8,7 @@ show: true
 order: 2
 # Image for the project card
 cardImage: {
-  src: "./images/alab/alab-image001.gif",
+  src: "../images/alab/alab-image001.gif",
   alt: "ALAB trailer main image",
 }
 # The buttons that will show up on the project card
@@ -45,7 +45,7 @@ titleAlt: "ALab"
 url: "alab"
 # The cover image of the blog page
 coverImage: {
-  src: "images/alab/DPELMainPage.jpg",
+  src: "../images/alab/DPELMainPage.jpg",
   alt: "ALAB main image",
 }
 # The image caption under the cover image
@@ -74,7 +74,7 @@ imageCaption: {
 # The extra image gallery
 # [] []
 # [] []
-otherImages: ["/images/alab/DPELDownload1.jpg", "/images/alab/DPELDownload2.jpg", "/images/alab/DPELDownload3.jpg", "/images/alab/DPELDownload4.jpg"]
+otherImages: ["../images/alab/DPELDownload1.jpg", "../images/alab/DPELDownload2.jpg", "../images/alab/DPELDownload3.jpg", "../images/alab/DPELDownload4.jpg"]
 
 # The download section of the blog
 downloadSection: {
