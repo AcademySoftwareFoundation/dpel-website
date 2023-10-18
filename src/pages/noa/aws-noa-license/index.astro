@@ -1,17 +1,19 @@
 ---
-import LicenseLayout from "../../../layout/LicenseLayout.astro";
-import MainLayout from "../../../layout/MainLayout.astro";
-const licenseContent = await Astro.glob("../../../content/license/aws-noa-license.md");
+import { getEntryBySlug } from 'astro:content';
+import LicenseLayout from '../../../layout/LicenseLayout.astro';
+import MainLayout from '../../../layout/MainLayout.astro';
+
+const content = await getEntryBySlug('license', 'aws-noa-license');
+const parentContent = await getEntryBySlug('articles', 'noa');
+
+const crumbs = [
+  { text: parentContent.data.titleAlt, href: `/${parentContent.data.url}` },
+  { text: content.data.titleAlt },
+];
 ---
 
-<MainLayout title="AWS Noa Character License - DPEL">
+<MainLayout title={content.data.title}>
   <div class="pb-32 container mx-auto">
-    {
-      licenseContent.map(license => (
-        <LicenseLayout 
-        frontmatter={license.frontmatter}
-        url={license.url}
-      />
-      ))}
+    <LicenseLayout {...content.data} crumbs={crumbs} />
   </div>
 </MainLayout>

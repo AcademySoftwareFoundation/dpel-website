@@ -1,33 +1,33 @@
 ---
-/** 
+/**
  * BUTTONS ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
- *  
+ *
  * This component is used for any button click functionality.
  * There are 3 different styles/states:
- * 
+ *
  *  1.) primary: Rounded sides button ( this is the default state )
- *    _____________    
+ *    _____________
  * (   button text   )
  *    _____________
- *  
- *  2.) secondary: Square button 
- *    _____________    
+ *
+ *  2.) secondary: Square button
+ *    _____________
  * [   button text   ]
- *    _____________   
- * 
+ *    _____________
+ *
  *  3.) disabled: the button will be a grey background
  *      and not clickable.
- * 
+ *
  * ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
  */
 
  import {BASE_URL} from '../utils/constants' //Keep this for relative path changes
 
-const { text, cardBtnVisible, type, url } = Astro.props;
+const { text, type, url } = Astro.props;
 
 const checkUrl = (url) => {
   const splitUrl = url.split(':').includes('https');
-  if (!splitUrl && !url.includes("/")) {
+  if (!splitUrl && !url.startsWith("/")) {
     url = BASE_URL + url
   }
   return url;
@@ -35,9 +35,8 @@ const checkUrl = (url) => {
 const updatedUrl = checkUrl(url)
 ---
 
-<a 
+<a
   class={`button ${type}`}
-  style={{visible: cardBtnVisible}} 
   href={updatedUrl}>
     <slot>{text}</slot>
 </a>
@@ -90,5 +89,5 @@ const updatedUrl = checkUrl(url)
     -webkit-transform: translateY(-3px);
     opacity: .87;
     color: #FFFFFF;
-  }  
+  }
 </style>

@@ -1,15 +1,11 @@
 ---
-/** 
- * This file is the 404 page.
- */
+import MainLayout from '../layout/MainLayout.astro';
+import '../styles/global.css';
+import Button from '../component/Button.astro';
 
-import MainLayout from "../layout/MainLayout.astro";
-import "../styles/global.css"
-import Button from "../component/Button.astro";
-
-import {BASE_URL} from "../utils/constants"
-
+import { BASE_URL } from '../utils/constants';
 ---
+
 <MainLayout>
   <div class="error-page">
     <h1 class="pb-20">404</h1>
@@ -19,7 +15,7 @@ import {BASE_URL} from "../utils/constants"
 </MainLayout>
 
 <style>
-  h1{
+  h1 {
     font-size: 17em;
   }
 
@@ -28,11 +24,12 @@ import {BASE_URL} from "../utils/constants"
     font-weight: 700;
   }
 
-  h1, h2 {
+  h1,
+  h2 {
     color: #252525;
   }
 
-  .error-page{
+  .error-page {
     display: flex;
     flex-direction: column;
     justify-content: center;

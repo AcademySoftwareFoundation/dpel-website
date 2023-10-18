@@ -11,7 +11,7 @@ const { title } = Astro.props;
     <link
       rel="icon"
       type="image/svg+xml"
-      href="/public/images/general/dpel-icon-black.svg"
+      href="/images/general/dpel-icon-black.svg"
     />
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
@@ -20,11 +20,21 @@ const { title } = Astro.props;
   <body>
     <!-- Header bar -->
     <header id="top container">
-      <div class="header-bar__top desktop:px-40 tablet:px-32 mobile-h:px-5 mobile-v:px-5">
-        <a href="https://www.aswf.io/projects/">AN <span class="blue">/* ACADEMY SOFTWARE FOUNDATION</span> PROJECT</a>
+      <div
+        class="header-bar__top desktop:px-40 tablet:px-32 mobile-h:px-5 mobile-v:px-5"
+      >
+        <a href="https://www.aswf.io/projects/"
+          >AN <span class="blue">/* ACADEMY SOFTWARE FOUNDATION</span> PROJECT</a
+        >
       </div>
-      <div class="header-bar__bottom flex items-center mobile-h:px-5 mobile-v:px-5">
-        <a class="desktop:hidden tablet:hidden mobile-h:hidden mobile-v:inline-block" href="/"><img class="w-12" src="./images/general/dpel-icon-white.svg" /></a>
+      <div
+        class="header-bar__bottom flex items-center mobile-h:px-5 mobile-v:px-5"
+      >
+        <a
+          class="desktop:hidden tablet:hidden mobile-h:hidden mobile-v:inline-block"
+          href="/"
+          ><img class="w-12" src="./images/general/dpel-icon-white.svg" /></a
+        >
       </div>
     </header>
     <!-- Rest of the content -->
@@ -34,33 +44,33 @@ const { title } = Astro.props;
 
 <!-- CSS -->
 <style>
-  header{
+  header {
     position: fixed;
     left: 0;
     z-index: 99999;
     position: relative;
-    font-family: "Titillium Web", "Open Sans", sans-serif !important;
+    font-family: 'Titillium Web', 'Open Sans', sans-serif !important;
     font-weight: 100;
     font-size: 12px;
-    color: #FFFFFF;
+    color: #ffffff;
     letter-spacing: 1px;
   }
 
-  .header-bar__top{
+  .header-bar__top {
     background: #252525;
     height: 33px;
     display: flex;
     align-items: center;
   }
 
-  .header-bar__top a{
-    color: #FFFFFF !important;
+  .header-bar__top a {
+    color: #ffffff !important;
   }
-  .header-bar__top a:hover{
-    color: #FFFFFF !imporant;
+  .header-bar__top a:hover {
+    color: #ffffff !imporant;
   }
 
-  .header-bar__bottom{
+  .header-bar__bottom {
     background-color: #000000;
     min-height: 50px;
   }

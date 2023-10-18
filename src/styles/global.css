@@ -9,12 +9,12 @@
   General
 *****************************************/
 
-*{
+* {
   box-sizing: border-box;
 }
 
 body {
-  font-family: "Open Sans", sans-serif;
+  font-family: 'Open Sans', sans-serif;
   font-size: 15px;
   color: #252525;
   line-height: 18px;
@@ -22,7 +22,7 @@ body {
 }
 
 h1 {
-  font-family: "Titillium Web", "Open Sans", sans-serif !important;
+  font-family: 'Titillium Web', 'Open Sans', sans-serif !important;
   font-size: 75px;
   color: #333333;
   line-height: 56px;
@@ -30,15 +30,15 @@ h1 {
 }
 
 h2 {
-  font-family: "Titillium Web", "Open Sans", sans-serif !important;
+  font-family: 'Titillium Web', 'Open Sans', sans-serif !important;
   font-size: 45px;
   font-weight: 600;
   color: #333333;
   line-height: 54px;
 }
 
-h3{
-  font-family: "Titillium Web", "Open Sans", sans-serif !important;
+h3 {
+  font-family: 'Titillium Web', 'Open Sans', sans-serif !important;
   font-size: 27px;
   font-weight: 600;
 }
@@ -61,14 +61,14 @@ a:hover {
 *****************************************/
 .main-section {
   margin-top: 75px;
-  background-image: url("../../public/images/general/dpel-icon-faded.svg");
+  background-image: url('/images/general/dpel-icon-faded.svg');
   background-position: center;
-  background-color: #FFFFFF;
+  background-color: #ffffff;
   background-size: cover;
 }
 
 .main-text {
-  font-family: "Titillium Web", "Open Sans", sans-serif !important;
+  font-family: 'Titillium Web', 'Open Sans', sans-serif !important;
   font-size: 18px;
   font-weight: 300;
   display: flex;
