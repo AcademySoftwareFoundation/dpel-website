@@ -61,7 +61,8 @@ a:hover {
 *****************************************/
 .main-section {
   margin-top: 75px;
-  background-image: url("../../public/images/general/dpel-icon-faded.svg");
+  background-image: url("/images/general/dpel-icon-faded.svg");
+
   background-position: center;
   background-color: #FFFFFF;
   background-size: cover;

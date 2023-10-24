@@ -1,17 +1,22 @@
 ---
+import { getEntryBySlug } from 'astro:content';
 import LicenseLayout from "../../../layout/LicenseLayout.astro";
 import MainLayout from "../../../layout/MainLayout.astro";
-const intelLicenseContent = await Astro.glob("../../../content/license/intel-volumetric-clouds-license.md");
+
+const content = await getEntryBySlug(
+  "license",
+  "intel-volumetric-clouds-license",
+);
+const parentContent = await getEntryBySlug("articles", "intel-cloud-library");
+
+const crumbs = [
+  { text: parentContent.data.titleAlt, href: `/${parentContent.data.url}` },
+  { text: content.data.titleAlt },
+];
 ---
 
-<MainLayout title="Intel Volumetric Clouds License - DPEL">
+<MainLayout title={content.data.title}>
   <div class="pb-32 container mx-auto">
-    {
-      intelLicenseContent.map(license => (
-        <LicenseLayout 
-        frontmatter={license.frontmatter}
-        url={license.url}
-      />
-      ))}
+    <LicenseLayout {...content.data} crumbs={crumbs} />
   </div>
 </MainLayout>

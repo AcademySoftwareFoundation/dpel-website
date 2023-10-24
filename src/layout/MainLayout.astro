@@ -3,6 +3,7 @@
  * This Layout is for the general wrapper for the entire site.
  */
 const { title } = Astro.props;
+import { BASE_URL } from "../utils/constants";
 ---
 
 <html lang="en">
@@ -11,11 +12,11 @@ const { title } = Astro.props;
     <link
       rel="icon"
       type="image/svg+xml"
-      href="/public/images/general/dpel-icon-black.svg"
+      href="/images/general/dpel-icon-black.svg"
     />
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
-    <title>{title}</title>
+    <title>{`${title}${Astro.url.pathname !== BASE_URL ? ` - DPEL` : ''}`}</title>
   </head>
   <body>
     <!-- Header bar -->

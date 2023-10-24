@@ -1,5 +1,5 @@
 ---
-/** 
+/**
  * This Layout is for the Noa asset page.
  */
 
@@ -13,12 +13,24 @@ import {BASE_URL} from "../utils/constants"
 import '../styles/global.css'
 
 // Data from markdown
-const { frontmatter } = Astro.props;
-const {title, coverImage, imageCaption, otherImages, titleAlt, filmLink, extraHeaderContent, includedContentTop, includedContentBottom, credits, downloadSection} = frontmatter;
+const {
+  coverImage,
+  credits,
+  crumbs,
+  downloadSection,
+  extraHeaderContent,
+  filmLink,
+  imageCaption,
+  includedContentBottom,
+  includedContentTop,
+  otherImages,
+  title,
+  titleAlt,
+} = Astro.props;
 ---
 <header class="pb-28 mt-20 text-center">
-  
-  <Breadcrumbs titleAlt={titleAlt} />
+
+  <Breadcrumbs titleAlt={titleAlt} crumbs={crumbs} />
   <div class="header-content px-12">
     <div class="pb-10">
       <Button text="DPEL HOME PAGE" url={BASE_URL} type="primary" />
@@ -65,9 +77,11 @@ const {title, coverImage, imageCaption, otherImages, titleAlt, filmLink, extraHe
   </ul>
   <p class="pt-8 pb-3"><i>{includedContentTop.note}</i></p>
   {includedContentTop.fileNotes.map(file => (
-    <p class="pt-7"><b>{file.subtitle}</b></p>
-    <p>{file.description}</p>
-  ))}   
+    <>
+      <p class="pt-7"><b>{file.subtitle}</b></p>
+      <p>{file.description}</p>
+    </>
+  ))}
 </div>
 <div class="post-content container mx-auto px-10">
   <div class="post-content-images mb-32 grid desktop:grid-cols-3 tablet:grid-cols-3 mobile-h:grid-cols-1 mobile-v:grid-cols-1">
@@ -76,7 +90,8 @@ const {title, coverImage, imageCaption, otherImages, titleAlt, filmLink, extraHe
     </div>
     <div class="col-span-2">
       <img class="pl-8 pb-5" src={`${BASE_URL}${otherImages[1]}`} />
-      <img class="pl-8" src={`${BASE_URL}${otherImages[2]}`} /></div>
+      <img class="pl-8" src={`${BASE_URL}${otherImages[2]}`} />
+    </div>
   </div>
   <div class="post-content-bottom container text-left mobile-h:px-5 mobile-v:px-5">
     <h3 class="text-left">{ includedContentBottom.title }</h3>
@@ -99,7 +114,7 @@ const {title, coverImage, imageCaption, otherImages, titleAlt, filmLink, extraHe
                   // //   return ( <li class="pl-5">{replacedText}</li> )
                   // }
                   return ( <li class="pl-5">{child.text1} {child.text2 ? (<text><text>&#8594;</text>{child.text2}</text>): null} </li> )
-                })} 
+                })}
               </ul>
             )
           } else {
@@ -107,7 +122,7 @@ const {title, coverImage, imageCaption, otherImages, titleAlt, filmLink, extraHe
           }
         })}
       </ul>
-      ) 
+      )
     )}
   </div>
   <div class="post-content-credits pt-10">
@@ -121,7 +136,7 @@ const {title, coverImage, imageCaption, otherImages, titleAlt, filmLink, extraHe
 
 <style>
 .header-content {
-  background-image: url("../../public/images/general/dpel-icon-faded.svg");
+  background-image: url("/images/general/dpel-icon-faded.svg");
   background-position: center;
   background-color: #FFFFFF;
   background-size: cover;
