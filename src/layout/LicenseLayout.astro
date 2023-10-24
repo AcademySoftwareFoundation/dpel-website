@@ -1,5 +1,5 @@
 ---
-/** 
+/**
  * This Layout is for the License pages.
  */
 
@@ -8,21 +8,35 @@ import Button from "../component/Button.astro";
 import Breadcrumbs from "../component/Breadcrumbs.astro";
 
 // Data from markdown
-const { frontmatter } = Astro.props;
-const {title, titleAlt, blogTitleAlt, homePageUrl, previousPageUrl, licenseContent, licenseConditions, licenseDisclaimer, hideButtons } = frontmatter;
+const {
+  blogTitleAlt,
+  crumbs,
+  hideButtons,
+  homePageUrl,
+  licenseConditions,
+  licenseContent,
+  licenseDisclaimer,
+  previousPageUrl,
+  title,
+  titleAlt,
+} = Astro.props;
 ---
 <!-- Header bar -->
 <div class="license-container container mx-auto desktop:px-16 tablet:px-16 px-9">
   {!hideButtons && (
-  <div class="breadcrumb-container text-left pt-10"><Breadcrumbs titleAlt={titleAlt} blogTitleAlt={blogTitleAlt} /></div>
-  <div class="license-header text-center mt-10">
-    <Button type="primary" url={previousPageUrl}>BACK</Button>
-    <Button type="primary" url={homePageUrl}>DPEL HOME PAGE</Button>
-    <h2 class="desktop:text-5xl tablet:text-5xl  pt-10 pb-10 mb-20">{title}</h2>
-  </div>
+    <>
+      <div class="breadcrumb-container text-left pt-10">
+        <Breadcrumbs titleAlt={titleAlt} blogTitleAlt={blogTitleAlt} crumbs={crumbs} />
+      </div>
+      <div class="license-header text-center mt-10">
+        <Button type="primary" url={previousPageUrl}>BACK</Button>
+        <Button type="primary" url={homePageUrl}>DPEL HOME PAGE</Button>
+        <h2 class="desktop:text-5xl tablet:text-5xl  pt-10 pb-10 mb-20">{title}</h2>
+      </div>
+    </>
   )}
   <div class="license-content pb-0">
-    { 
+    {
       licenseContent.map(content => (
         <p class="mb-5">{content}</p>
       ))
@@ -30,7 +44,7 @@ const {title, titleAlt, blogTitleAlt, homePageUrl, previousPageUrl, licenseConte
   </div>
   <div class="license-conditions">
     <ol class="ml-8">
-    { 
+    {
       licenseConditions.map(condition => (
         <li class="mb-5">{condition}</li>
       ))
@@ -58,7 +72,7 @@ const {title, titleAlt, blogTitleAlt, homePageUrl, previousPageUrl, licenseConte
   }
 
   .license-header {
-    background-image: url("../../public/images/general/dpel-icon-faded.svg");
+    background-image: url("/images/general/dpel-icon-faded.svg");
     background-position: center;
     background-color: #FFFFFF;
     background-size: cover;

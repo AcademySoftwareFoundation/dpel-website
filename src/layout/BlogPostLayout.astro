@@ -8,12 +8,18 @@ import '../styles/global.css'
 import {BASE_URL} from '../utils/constants'
 
 // Data from markdown
-const { frontmatter } = Astro.props;
-const {title, titleAlt, coverImage, imageCaption, otherImages, downloadSection} = frontmatter;
-
+const {
+  coverImage,
+  crumbs,
+  downloadSection,
+  imageCaption,
+  otherImages,
+  title,
+  titleAlt,
+} = Astro.props;
 ---
 <header class="pb-28 mt-20 text-center">
-  <Breadcrumbs titleAlt={titleAlt} />
+  <Breadcrumbs titleAlt={titleAlt} crumbs={crumbs} />
   <div class="pb-10">
     <Button text="DPEL HOME PAGE" url={BASE_URL} type="primary" />
   </div>
@@ -23,7 +29,7 @@ const {title, titleAlt, coverImage, imageCaption, otherImages, downloadSection} 
   <img class="w-full" width="1300" height="1000" src={`${BASE_URL}${coverImage.src}`} alt={coverImage.alt} />
   <p class="post-image-caption text-center py-12">
     {imageCaption.text && imageCaption.textLinks && imageCaption.textLinks.map((item, i)=> (
-      <span>{imageCaption.text[i]} 
+      <span>{imageCaption.text[i]}
         <a href={imageCaption.textLinks[i].link} target="_blank" rel="noreferrer noopener">
           {imageCaption.textLinks[i].text}
         </a>

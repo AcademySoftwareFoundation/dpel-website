@@ -1,17 +1,15 @@
 ---
+import { getEntryBySlug } from 'astro:content';
+
 import MainLayout from "../../layout/MainLayout.astro";
 import BlogPostLayout from "../../layout/BlogPostLayout.astro";
 
-const assetContent = await Astro.glob("../../content/articles/alab-trailer.md");
+const content = await getEntryBySlug('articles', 'alab-trailer');
+const crumbs = [{ text: content.data.titleAlt }];
 ---
 
-<MainLayout title="ALab Trailer - DPEL">
+<MainLayout title={content.data.title}>
   <div class="pb-32 container mx-auto">
-    {
-      assetContent.map(asset => (
-        <BlogPostLayout
-        frontmatter={asset.frontmatter}
-      />
-      ))}
+    <BlogPostLayout {...content.data} crumbs={crumbs} />
   </div>
 </MainLayout>

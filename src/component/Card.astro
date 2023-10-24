@@ -1,17 +1,16 @@
 ---
-/** 
+/**
  * CARD ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
- *  
+ *
  * This component is used on the home page mainly under Assets.
  * The card contains information on surface level of the project.
- * 
+ *
  * ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
  */
 
 import Button from "./Button.astro";
 import "../styles/global.css"
-const { frontmatter, url } = Astro.props;
-const {show, title, description, descriptionLinks, cardImage, cardBtnVisible, buttons} = frontmatter;
+const {show, title, description, descriptionLinks, cardImage, buttons, url} = Astro.props;
 ---
 {show && (
   <article class="card w-full grid gap-5 desktop:grid-cols-5 tablet:grid-cols-5 mobile-h:grid-cols-1 mobile-v:grid-cols-1 mb-20">
@@ -29,9 +28,8 @@ const {show, title, description, descriptionLinks, cardImage, cardBtnVisible, bu
             <Button
               frontmatter={button.frontmatter}
               type={button.type ? button.type : "primary"}
-              text={button.text} 
-              url={button.url} 
-              visible={cardBtnVisible}
+              text={button.text}
+              url={button.url}
             />
           ))
         }

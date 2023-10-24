@@ -64,7 +64,7 @@ imageCaption: {
 # The extra image gallery
 # [] []
 # [] []
-otherImages: ["", ""]
+otherImages: []
 
 # The download section of the blog
 downloadSection: {
@@ -74,7 +74,7 @@ downloadSection: {
   licenseButtonLink: "intel-cloud-library/intel-volumetric-clouds-library",
   # This header is only if the table needs a header < Please see Intel page for example of that >
   tableHeader: "VOLUMETRIC CLOUDS",
-  
+
   # The download links and button setup for the download table.
   downloads: [{
     buttonText: "DOWNLOAD",

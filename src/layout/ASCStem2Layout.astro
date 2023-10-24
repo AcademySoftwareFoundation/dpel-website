@@ -1,5 +1,5 @@
 ---
-/** 
+/**
  * This Layout is for ASC Stem 2 page.
  */
 import Breadcrumbs from "../component/Breadcrumbs.astro";
@@ -9,13 +9,23 @@ import '../styles/global.css'
 import LicenseLayout from "./LicenseLayout.astro";
 import { BASE_URL } from "../utils/constants";
 
-const { frontmatter } = Astro.props;
-const {title, titleAlt, coverImage, imageCaption, otherImages, downloadSection, licenseContent, licenseConditions, licenseDisclaimer} = frontmatter;
+const {
+  coverImage,
+  crumbs,
+  downloadSection,
+  imageCaption,
+  licenseConditions,
+  licenseContent,
+  licenseDisclaimer,
+  otherImages,
+  title,
+  titleAlt,
+} = Astro.props;
 ---
 
 <>
   <header class="px-10 pb-20 mt-20 text-center">
-    <Breadcrumbs titleAlt={titleAlt} />
+    <Breadcrumbs titleAlt={titleAlt} crumbs={crumbs} />
     <div class="header-post-content">
       <h2 class="pb-5">{title}</h2>
       <div class="pt-10 pb-16">
@@ -42,8 +52,8 @@ const {title, titleAlt, coverImage, imageCaption, otherImages, downloadSection, 
     </div>
     <div class="license mt-16 p-10">
       <p class="pb-6 desktop:ml-16 tablet:ml-16 mobile-h:ml-10 callout-text justify-self-center">{downloadSection.subtext}</p>
-      {<LicenseLayout 
-        frontmatter={{licenseContent, licenseConditions, licenseDisclaimer, hideButtons: true}}
+      {<LicenseLayout
+        {...{licenseContent, licenseConditions, licenseDisclaimer, hideButtons: true}}
         url={''}
       />}
     </div>
@@ -62,13 +72,13 @@ const {title, titleAlt, coverImage, imageCaption, otherImages, downloadSection, 
         <Table downloadData={data.downloadsList} /></div>)
       })
     }
-    
+
   </div>
 </>
 <style>
 
 .header-post-content{
-  background-image: url("../../public/images/general/dpel-icon-faded.svg");
+  background-image: url("/images/general/dpel-icon-faded.svg");
   background-position: center;
   background-color: #FFFFFF;
   background-size: cover;
