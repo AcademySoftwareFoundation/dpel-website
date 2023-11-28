@@ -82,7 +82,7 @@ downloadSection: {
   # The download links and button setup for the download table.
   downloads: [{
     buttonText: "DOWNLOAD",
-    downloadUrl: "https://dpel-assets.aswf.io/4004-moore-lane/intel_mooreLane_v1_2_0.zip",
+    downloadUrl: "https://dpel-assets.aswf.io/4004-moore-lane/intel_moorelane_v1_2_0.zip",
     size: "7.7 GB",
     description: "4004 Moore Lane v 1.2.0",
     type: "primary"
