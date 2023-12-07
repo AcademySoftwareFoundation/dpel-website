@@ -1,8 +1,5 @@
 ---
 ############################################################
-# Feel free to copy and paste this as a new article 
-# markdown file.
-
 # Card view on home page
 ############################################################
 # Should the project show up on the home page
@@ -11,7 +8,7 @@ show: true
 order: 7
 # Image for the project card
 cardImage: {
-  src: "./images/aws-picchu-edit/aws-picchu-edit-still.png",
+  src: "../images/aws-picchu-edit/aws-picchu-edit-still.png",
   alt: "AWS Picchu Edit title card",
 }
 # The buttons that will show up on the project card
@@ -80,7 +77,10 @@ imageCaption: {
 # The extra image gallery
 # [] []
 # [] []
-otherImages: ["/images/aws-picchu-edit/aws-picchu-edit-davinci-resolve.png", "/images/aws-picchu-edit/aws-picchu-edit-otio-raven.png"]
+otherImages: [
+  "../images/aws-picchu-edit/aws-picchu-edit-davinci-resolve.png",
+  "../images/aws-picchu-edit/aws-picchu-edit-otio-raven.png"
+]
 
 # The download section of the blog
 downloadSection: {
