@@ -21,11 +21,11 @@ const { downloadData } = Astro.props;
           <td class="pl-2 pt-3">
             <Button text={item.buttonText} type={item.type ? item.type : 'primary'} url={item.downloadUrl} />
           </td> 
-          <td class="pl-4">{item.size}</td>   
           <td class="pl-4">
             {item.description} {item.descriptionBold ? 
               ( <text><b>{item.descriptionBold}</b>{item.extraDescription}</text> ) : null} 
           </td>
+          <td class="pl-4"><p>{item.size}</p><p class="hash">{item.hashA}</p><p class="hash">{item.hashB}</p></td>   
         </tr>
       ))
     }
@@ -44,7 +44,11 @@ const { downloadData } = Astro.props;
   tr td:first-child(){
     width: 100px;
   }
-  tr td:nth-child(2){
-    width: 125px;
+  tr td:nth-child(3){
+    width: 330px;
+  }
+  .hash {
+   font-weight: 300;
+   font-size: 12px;
   }
 </style>
