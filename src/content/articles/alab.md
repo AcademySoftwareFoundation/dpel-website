@@ -88,23 +88,30 @@ downloadSection: {
   # The download links and button setup for the download table.
   downloads: [{
     buttonText: "DOWNLOAD",
-    downloadUrl: "https://dpel-assets.aswf.io/usd-alab/alab-v2.0.1.zip",
-    size: "8.7 GB",
-    description: "USD Scene - v.2.0.1",
+    downloadUrl: "https://dpel-assets.aswf.io/usd-alab/alab-v2.1.0.zip",
+    size: "9.3 GB",
+    description: "USD Scene - v.2.1.0",
     type: "primary"
   },
   {
     buttonText: "DOWNLOAD",
-    downloadUrl: "https://aswf-dpel-assets.s3.amazonaws.com/usd-alab/alab-textures.v2.0.1.zip",
-    size: "63.4 GB",
-    description: "High Resolution Textures - v.2.0.1",
+    downloadUrl: "https://aswf-dpel-assets.s3.amazonaws.com/usd-alab/alab-textures.v2.1.0.zip",
+    size: "71.4 GB",
+    description: "High Resolution Textures - v.2.1.0",
     type: "primary"
   },
   {
     buttonText: "DOWNLOAD",
-    downloadUrl: "https://dpel-assets.aswf.io/usd-alab/alab-procedurals.v2.0.1.zip",
-    size: "18.3 GB",
-    description: "Baked Procedural Data - v.2.0.1",
+    downloadUrl: "https://dpel-assets.aswf.io/usd-alab/alab-cameras.v2.1.0.zip",
+    size: "500 KB",
+    description: "Camera - v.2.1.0",
+    type: "primary"
+  },             
+  {
+    buttonText: "DOWNLOAD",
+    downloadUrl: "https://dpel-assets.aswf.io/usd-alab/alab-procedurals.v2.1.0.zip",
+    size: "18.1 GB",
+    description: "Baked Procedural Data - v.2.1.0",
     type: "primary"
   }]
 }
