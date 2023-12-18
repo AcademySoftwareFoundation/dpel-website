@@ -93,6 +93,12 @@ downloadSection: {
 
   # The download links and button setup for the download table.
   downloads: [{
+    buttonText: "README",
+    downloadUrl: "https://github.com/AcademySoftwareFoundation/OpenTimelineIO/wiki/AWS-Picchu-Edit-OTIO-Conversion-Notes",
+    descriptionBold: "Documentation explaining Resolve to OTIO conversion, caveats, and contact information for questions & feedback.",
+    type: "primary"
+  },
+  {
     buttonText: "DOWNLOAD",
     downloadUrl: "https://dpel-assets.aswf.io/picchu/picchu_v10_az.dra.zip",
     size: "2.9 GB",
