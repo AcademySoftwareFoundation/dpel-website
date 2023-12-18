@@ -41,7 +41,7 @@ title: "AWS Picchu Edit"
 # Used mainly for the Breadcrumbs
 titleAlt: "AWS Picchu Edit"
 # The url of the blog page. Please remember to add this base url before you add the rest of the url.
-url: "picchu"
+url: "aws-picchu-edit"
 # The cover image of the blog page
 coverImage: {
   src: "./images/aws-picchu-edit/aws-picchu-edit-still.png",
