@@ -16,7 +16,7 @@ nextPageUrl: "/alab/alab-license"
 # License text. Each sentence is broken up by commas.
 licenseContent: [
   'License for Animal Logic ALab (the "Asset Name").',
-  "Animal Logic ALab Copyright 2022 Animal Logic Pty Limited. All rights reserved.",
+  "Animal Logic ALab Copyright 2024 Animal Logic Pty Limited. All rights reserved.",
   "Redistribution and use of these digital assets, with or without modification, solely for education, training, research, software and hardware development, performance benchmarking (including publication of benchmark results and permitting reproducibility of the benchmark results by third parties), or software and hardware product demonstrations, are permitted provided that the following conditions are met:"
 ]
 
