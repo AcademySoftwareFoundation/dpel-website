@@ -92,6 +92,26 @@ downloadSection: {
     size: "8.95 GB",
     description: "public01_techvar_assets_v008",
     type: "primary"
+  },
+  {
+    buttonText: "DOWNLOAD",
+    downloadUrl: "https://aswf-dpel-assets.s3.amazonaws.com/usd-alab/alab-textures.v2.1.0.zip",
+    size: "71.4 GB",
+    description: "High Resolution Textures - v.2.1.0",
+    type: "primary"
+  },
+  {
+    buttonText: "DOWNLOAD",
+    downloadUrl: "https://dpel-assets.aswf.io/usd-alab/alab-cameras.v2.1.0.zip",
+    size: "500 KB",
+    description: "Camera - v.2.1.0",
+    type: "primary"
+  },             
+  {
+    buttonText: "DOWNLOAD",
+    downloadUrl: "https://dpel-assets.aswf.io/usd-alab/alab-procedurals.v2.1.0.zip",
+    size: "18.1 GB",
+    description: "Baked Procedural Data - v.2.1.0",
   }]
 }
 ---
