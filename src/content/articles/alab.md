@@ -88,30 +88,47 @@ downloadSection: {
   # The download links and button setup for the download table.
   downloads: [{
     buttonText: "DOWNLOAD",
-    downloadUrl: "https://dpel-assets.aswf.io/usd-alab/alab-v2.1.0.zip",
+    downloadUrl: "https://dpel-assets.aswf.io/usd-alab/alab-v2.2.0.zip",
     size: "9.3 GB",
-    description: "USD Scene - v.2.1.0",
+    description: "",
+    descriptionBold: "Asset Structure | ",
+    extraDescription: "Main asset structure for the ALab showcasing how all assets relate to each other through USD composition arcs. This is purely the USD structure linking all files, and does not include any geometry, shaders or lights.",
     type: "primary"
   },
   {
     buttonText: "DOWNLOAD",
-    downloadUrl: "https://aswf-dpel-assets.s3.amazonaws.com/usd-alab/alab-textures.v2.1.0.zip",
+    downloadUrl: "https://dpel-assets.aswf.io/usd-alab/alab-v2.2.0.zip",
+    size: "8.9 GB",
+    description: "",
+    descriptionBold: "Techvar Assets | ",
+    extraDescription: "Assets holding the heavy creative content from DCCs (geometry, lights, shaders, textures, rigs), which Animal Logic refers to as 'techvar assets'. Merge this with the 'Asset Structure' package to render the ALab with 1k textures and without fur & cloth.",
+    type: "primary"
+  },
+  {
+    buttonText: "DOWNLOAD",
+    downloadUrl: "https://aswf-dpel-assets.s3.amazonaws.com/usd-alab/alab-textures.v2.2.0.zip",
     size: "71.4 GB",
-    description: "High Resolution Textures - v.2.1.0",
+    description: "",
+    descriptionBold: "Texture Pack | ",
+    extraDescription: "4k half float mipmapped OpenEXR textures in ACEScg color space. Merge this to see much higher quality for final rendering.",
     type: "primary"
   },
   {
     buttonText: "DOWNLOAD",
-    downloadUrl: "https://dpel-assets.aswf.io/usd-alab/alab-cameras.v2.1.0.zip",
+    downloadUrl: "https://dpel-assets.aswf.io/usd-alab/alab-cameras.v2.2.0.zip",
     size: "500 KB",
-    description: "Camera - v.2.1.0",
+    description: "",
+    descriptionBold: "Cameras | ",
+    extraDescription: "Cameras from the ALab Phase 2 trailer. Merge this to be able to select any trailer camera directly from the USD stage.",
     type: "primary"
   },             
   {
     buttonText: "DOWNLOAD",
-    downloadUrl: "https://dpel-assets.aswf.io/usd-alab/alab-procedurals.v2.1.0.zip",
+    downloadUrl: "https://dpel-assets.aswf.io/usd-alab/alab-procedurals.v2.2.0.zip",
     size: "18.1 GB",
-    description: "Baked Procedural Data - v.2.1.0",
+    description: "",
+    descriptionBold: "Baked Procedurals | ",
+    extraDescription: "The “cached” USD representation of our render-time procedurals in the shot. Merge this to see the fur & cloth on the animated characters.",
     type: "primary"
   }]
 }
