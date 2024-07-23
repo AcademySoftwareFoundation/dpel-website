@@ -5,7 +5,7 @@
 # Should the project show up on the home page
 show: true
 # The order the project card will show up on the home page
-order: 2
+order: 8
 # Image for the project card
 cardImage: {
   src: "../images/alab/alab-image001.gif",
