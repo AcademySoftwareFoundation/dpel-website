@@ -88,8 +88,8 @@ downloadSection: {
   # The download links and button setup for the download table.
   downloads: [{
     buttonText: "DOWNLOAD",
-    downloadUrl: "https://dpel-assets.aswf.io/usd-alab/alab-v2.2.0.zip",
-    size: "300 MB",
+    downloadUrl: "https://github.com/DigitalProductionExampleLibrary/ALab/archive/refs/tags/v2.2.0.zip",
+    size: "294 MB",
     description: "",
     descriptionBold: "Asset Structure - v.2.2.0 | ",
     extraDescription: "Main asset structure for the ALab showcasing how all assets relate to each other through USD composition arcs. This is purely the USD structure linking all files, and does not include any geometry, shaders or lights.",
