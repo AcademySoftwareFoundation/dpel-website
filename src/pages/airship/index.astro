@@ -1,0 +1,17 @@
+---
+import { getEntryBySlug } from "astro:content";
+
+// Layout
+import MainLayout from "../../layout/MainLayout.astro";
+import BlogPostLayout3 from "../../layout/BlogPostLayout3.astro";
+
+// Markdown
+const content = await getEntryBySlug("articles", "airship");
+const crumbs = [{ text: content.data.titleAlt }]
+---
+
+<MainLayout title={content.data.title}>
+  <div class="pb-32 container mx-auto">
+    <BlogPostLayout3 {...content.data} crumbs={crumbs} />
+  </div>
+</MainLayout>

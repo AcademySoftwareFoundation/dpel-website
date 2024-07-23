@@ -1,0 +1,19 @@
+---
+import { getEntryBySlug } from "astro:content";
+import LicenseLayout from "../../../layout/LicenseLayout.astro";
+import MainLayout from "../../../layout/MainLayout.astro";
+
+const content = await getEntryBySlug("license", "aws-airship-license");
+const parentContent = await getEntryBySlug("articles", 'airship');
+
+const crumbs = [
+  { text: parentContent.data.titleAlt, href: `/${parentContent.data.url}` },
+  { text: content.data.titleAlt },
+];
+---
+
+<MainLayout title={content.data.title}>
+  <div class="pb-32 container mx-auto">
+    <LicenseLayout {...content.data} crumbs={crumbs} />
+  </div>
+</MainLayout>
