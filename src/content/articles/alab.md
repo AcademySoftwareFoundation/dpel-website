@@ -52,7 +52,9 @@ coverImage: {
 imageCaption: {
   # Text is separated by sections to allow links to be added in. <text> <link> <text>
   text: [
-    "A full production scene created by Animal Logic for exploration by the wider community to be used in demonstrations, training material, and in the testing of USD support across software and pipeline. ALab has over 300 assets, complete with high-quality textures and two characters with looping animation in shot context, expanding on the static scenes released to date.  Supplied as three separate downloads:  the full production scene, high-quality textures, and baked procedural fur and fabric for the animated characters. For more information, visit the ",
+    "A full production scene created by Animal Logic for exploration by the wider community to be used in demonstrations, training material, and in the testing of USD support across software and pipeline. ALab has over 300 assets, complete with high-quality textures and two characters with looping animation in shot context, expanding on the static scenes released to date. Supplied as separate downloads: the asset structure (available ", 
+    " as well), geometry / rigs / shaders assets, high-quality textures, and baked procedural fur and fabric for the animated characters. For more information, visit the ",
+    ", read the ",
     ", or join us on ", 
     "."
   ],
@@ -62,8 +64,16 @@ imageCaption: {
   #   link: ""
   # }
   textLinks: [{
+    text: "in GitHub",
+    link: "https://github.com/DigitalProductionExampleLibrary/ALab"
+  },
+  {
     text: "Animal Logic ALab website",
     link: "https://animallogic.com/alab/"
+  },
+  {
+    text: "technical documentation",
+    link: "https://digitalproductionexamplelibrary.github.io/ALab/main"
   },
   {
     text: "Slack.",
