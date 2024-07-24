@@ -19,8 +19,8 @@ buttons: [
     type: "primary"
   },
   {
-    text: "PROJECT HOME",
-    url: "https://animallogic.com/alab",
+    text: "GITHUB REPOSITORY",
+    url: "https://github.com/DigitalProductionExampleLibrary/ALab",
     type: "primary"
   },
 ]
@@ -36,7 +36,7 @@ descriptionLinks: {
 ############################################################
 
 # The layout file the blog page is using
-layout: "../../layout/BlogPostLayout.astro"
+layout: "../../layout/BlogPostLayout4.astro"
 # Title of the blog page
 title: "Animal Logic ALab - USD Production Scene"
 # Used mainly for the Breadcrumbs
@@ -97,49 +97,66 @@ downloadSection: {
 
   # The download links and button setup for the download table.
   downloads: [{
-    buttonText: "DOWNLOAD",
-    downloadUrl: "https://github.com/DigitalProductionExampleLibrary/ALab/archive/refs/tags/v2.2.0.zip",
+    buttons: [
+      {
+        text: "GITHUB REPOSITORY",
+        url: "https://github.com/DigitalProductionExampleLibrary/ALab",
+        type: "primary",
+      },
+      {
+        text: "DOWNLOAD",
+        url: "https://github.com/DigitalProductionExampleLibrary/ALab/archive/refs/tags/v2.2.0.zip",
+        type: "primary",
+      }
+    ],
     size: "294 MB",
     description: "",
-    descriptionBold: "Asset Structure - v.2.2.0 | ",
-    extraDescription: "Main asset structure for the ALab showcasing how all assets relate to each other through USD composition arcs. This is purely the USD structure linking all files, and does not include any geometry, shaders or lights.",
-    type: "primary"
+    descriptionBold: "Asset Structure - v.2.2.0",
+    extraDescription: "Main asset structure for the ALab showcasing how all assets relate to each other through USD composition arcs. This is purely the USD structure linking all files, and does not include any geometry, shaders or lights.  Clone the GitHub repository, or download the Zip artifact from the GitHub Release.",
   },
   {
-    buttonText: "DOWNLOAD",
-    downloadUrl: "https://dpel-assets.aswf.io/usd-alab/alab-techvars.v2.2.0.zip",
+    buttons: [{
+      text: "DOWNLOAD",
+      url: "https://dpel-assets.aswf.io/usd-alab/alab-techvars.v2.2.0.zip",
+      type: "primary",
+    }],
     size: "8.9 GB",
     description: "",
-    descriptionBold: "Techvar Assets - v.2.2.0 | ",
+    descriptionBold: "Techvar Assets - v.2.2.0",
     extraDescription: "Assets holding the heavy creative content from DCCs (geometry, lights, shaders, textures, rigs), which Animal Logic refers to as 'techvar assets'. Merge this with the 'Asset Structure' package to render the ALab with 1k textures and without fur & cloth.",
-    type: "primary"
   },
   {
-    buttonText: "DOWNLOAD",
-    downloadUrl: "https://aswf-dpel-assets.s3.amazonaws.com/usd-alab/alab-textures.v2.2.0.zip",
+    buttons: [{
+      text: "DOWNLOAD",
+      url: "https://aswf-dpel-assets.s3.amazonaws.com/usd-alab/alab-textures.v2.2.0.zip",
+      type: "primary",
+    }],
     size: "71.4 GB",
     description: "",
-    descriptionBold: "Texture Pack - v.2.2.0 | ",
+    descriptionBold: "Texture Pack - v.2.2.0",
     extraDescription: "4k half float mipmapped OpenEXR textures in ACEScg color space. Merge this to see much higher quality for final rendering.",
-    type: "primary"
   },
   {
-    buttonText: "DOWNLOAD",
-    downloadUrl: "https://dpel-assets.aswf.io/usd-alab/alab-cameras.v2.2.0.zip",
+    buttons: [{
+      text: "DOWNLOAD",
+      url: "https://dpel-assets.aswf.io/usd-alab/alab-cameras.v2.2.0.zip",
+      type: "primary",
+    }],
     size: "500 KB",
     description: "",
-    descriptionBold: "Cameras - v.2.2.0 | ",
+    descriptionBold: "Cameras - v.2.2.0",
     extraDescription: "Cameras from the ALab Phase 2 trailer. Merge this to be able to select any trailer camera directly from the USD stage.",
-    type: "primary"
   },             
   {
-    buttonText: "DOWNLOAD",
-    downloadUrl: "https://dpel-assets.aswf.io/usd-alab/alab-procedurals.v2.2.0.zip",
+    buttons: [{
+      text: "DOWNLOAD",
+      url: "https://dpel-assets.aswf.io/usd-alab/alab-procedurals.v2.2.0.zip",
+      type: "primary",
+    }],
     size: "18.1 GB",
     description: "",
-    descriptionBold: "Baked Procedurals - v.2.2.0 | ",
+    descriptionBold: "Baked Procedurals - v.2.2.0",
     extraDescription: "The “cached” USD representation of our render-time procedurals in the shot. Merge this to see the fur & cloth on the animated characters.",
-    type: "primary"
   }]
 }
 ---

@@ -1,0 +1,92 @@
+---
+// General blog page layout
+import Button from "../component/Button.astro";
+import Table from "../component/Table2.astro";
+import Breadcrumbs from "../component/Breadcrumbs.astro";
+import '../styles/global.css'
+
+import {BASE_URL} from '../utils/constants'
+
+// Data from markdown
+const {
+  coverImage,
+  crumbs,
+  downloadSection,
+  imageCaption,
+  otherImages,
+  title,
+  titleAlt,
+} = Astro.props;
+---
+<header class="pb-28 mt-20 text-center">
+  <Breadcrumbs titleAlt={titleAlt} crumbs={crumbs} />
+  <div class="pb-10">
+    <Button text="DPEL HOME PAGE" url={BASE_URL} type="primary" />
+  </div>
+  <h2 class="mobile-v:px-5 mobile-h:px-5">{title}</h2>
+</header>
+<div class="post-content container mx-auto px-10">
+  <img class="w-full" width="1300" height="1000" src={`${BASE_URL}${coverImage.src}`} alt={coverImage.alt} />
+  <p class="post-image-caption text-center py-12">
+    {imageCaption.text && imageCaption.textLinks && imageCaption.textLinks.map((item, i)=> (
+      <span>{imageCaption.text[i]}
+        <a href={imageCaption.textLinks[i].link} target="_blank" rel="noreferrer noopener">
+          {imageCaption.textLinks[i].text}
+        </a>
+      </span>
+    ))}
+  </p>
+  <div class="post-content-images mb-32 grid gap-5 desktop:grid-cols-2 tablet:grid-cols-2 mobile-h:grid-cols-1 mobile-v:grid-cols-1">
+    { otherImages &&
+      otherImages.map(image => (
+      <img src={`${BASE_URL}${image}`} />
+      ))
+    }
+  </div>
+  <div class="post-content-download container mx-auto desktop:px-40 tablet:px-40 mobile-h:px-5 mobile-v:px-5 text-center">
+    <h2 class="pb-5">{downloadSection.title}</h2>
+    <p class="pb-6">{downloadSection.subtext}</p>
+    <Button text={downloadSection.licenseButtonText} type="secondary" url={`${BASE_URL}${downloadSection.licenseButtonLink}`} />
+    <p class="download-info pt-24 desktop:mx-40 pb-10">For large downloads, it is recommended to use a command-line tool
+      such as <strong>wget</strong> or <strong>curl</strong>. In most
+      browsers, you can right-mouse on the download link to copy the URL. Then
+      open a Command or Terminal window, and run the command <strong>wget
+      &lt;URL&gt;</strong>, or <strong>curl -L -O &lt;URL&gt;</strong>, where &lt;URL&gt; is
+      replaced with the download link. To resume an interrupted download, try
+      <strong>wget -c &lt;URL&gt;</strong> or <strong>curl -L -O -C -
+      &lt;URL&gt;</strong>.
+    </p>
+    { downloadSection.tableHeader && <h3 class="text-left pb-7">{downloadSection.tableHeader}</h3> }
+    <Table downloadData={downloadSection.downloads} />
+  </div>
+  <slot />
+</div>
+
+<style>
+.post-content p {
+  font-family: "Titillium Web", "Open Sans", sans-serif !important;
+  font-size: 20px;
+  font-weight: 300;
+  line-height: 28px;
+}
+
+.post-content-download {
+  font-family: 'Open Sans', Helvetica, sans-serif !important;
+}
+.post-content-download h2 {
+  font-weight: 700 !important;
+  letter-spacing: 1px;
+}
+.post-content-download p {
+  font-size: 15px !important;
+  font-weight: 300;
+}
+
+.post-content-download .download-info {
+  font-size: 18px !important;
+  line-height: 24px;
+  color: #606060 !important;
+}
+
+
+</style>
