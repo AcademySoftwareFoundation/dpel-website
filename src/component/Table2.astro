@@ -1,0 +1,75 @@
+---
+/**
+ * TABLE ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ *
+ * This component is used on the blog page for the download table.
+ *
+ * ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ */
+
+// For the download buttons
+import Button from "./Button.astro";
+// Data for the table
+const { downloadData } = Astro.props;
+---
+
+<table class="text-left w-full table-auto">
+  <tbody>
+    {
+      downloadData.map((item) => (
+        <tr>
+          <td class="pl-2 pt-3">
+            {item.buttons.map((button) => (
+              <Button
+                frontmatter={button.frontmatter}
+                type={button.type ? button.type : "primary"}
+                text={button.text}
+                url={button.url}
+              />
+            ))}
+          </td>
+          <td class="pl-4">
+            {item.description}{" "}
+            {item.descriptionBold ? (
+              <text>
+                <b>{item.descriptionBold}</b>
+              </text>
+              <br>
+              <text>
+                {item.extraDescription}
+              </text>
+            ) : null}
+          </td>
+          <td class="pl-4">
+            <p class="hash">{item.hashA}</p>
+            <>
+              <p>{item.size}</p>
+              <p class="hash">{item.hashB}</p>
+            </>
+          </td>
+        </tr>
+      ))
+    }
+  </tbody>
+</table>
+
+<style>
+  table {
+    border: 1px solid #000000;
+    color: #000000;
+  }
+  td {
+    border: 1px solid #000000;
+    background: #ffffff;
+  }
+  tr td:first-child() {
+    width: 100px;
+  }
+  tr td:nth-child(3) {
+    width: 130px;
+  }
+  .hash {
+    font-weight: 300;
+    font-size: 12px;
+  }
+</style>

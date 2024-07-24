@@ -2,7 +2,7 @@
 import { getEntryBySlug } from 'astro:content';
 
 import MainLayout from "../../layout/MainLayout.astro";
-import BlogPostLayout from "../../layout/BlogPostLayout.astro";
+import BlogPostLayout from "../../layout/BlogPostLayout4.astro";
 
 const content = await getEntryBySlug('articles', 'alab');
 const crumbs = [{ text: content.data.titleAlt }]
