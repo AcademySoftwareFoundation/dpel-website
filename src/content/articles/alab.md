@@ -107,7 +107,7 @@ downloadSection: {
   },
   {
     buttonText: "DOWNLOAD",
-    downloadUrl: "https://dpel-assets.aswf.io/usd-alab/alab-techvars.v2.2.0.zip
+    downloadUrl: "https://dpel-assets.aswf.io/usd-alab/alab-techvars.v2.2.0.zip",
     size: "8.9 GB",
     description: "",
     descriptionBold: "Techvar Assets - v.2.2.0 | ",
