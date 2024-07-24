@@ -126,7 +126,7 @@ downloadSection: {
   downloads: [{
     buttonText: "DOWNLOAD",
     downloadUrl: "https://dpel-assets.aswf.io/aws-spanner-asset-airship/aws-spanner-asset-airship-v1.0.zip",
-    size: "44.2 GB",
+    size: "42.3 GB",
     description: "AWS Airsihp Asset Zip",
     type: "primary"
   }]
