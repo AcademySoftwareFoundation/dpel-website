@@ -10,7 +10,7 @@ blogTitleAlt: "AWS Airship Asset"
 
 # Links for the buttons: Back and Home
 homePageUrl: "/"
-previousPageUrl: "/aws-airship-asset"
+previousPageUrl: "/airship"
 nextPageUrl: "/aws-airship-asset/aws-airship-license"
 
 # License text. Each sentence is broken up by commas.
