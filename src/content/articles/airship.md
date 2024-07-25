@@ -73,6 +73,7 @@ includedContentTop: {
       { text: "Maya surfacing file" },
       { text: "Textures" },
   ],
+  note: "Note: when you open the rig file, you will need to repath the reference to the low resolution model, and when you open the surf file you’ll need to repath the textures, to point to the location of the files on your computer.",
   fileNotes: [
     {
       subtitle: "Rig File",
