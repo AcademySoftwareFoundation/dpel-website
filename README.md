@@ -1,5 +1,7 @@
 # DPEL Website Doc
 
+[![OpenSSF Best Practices](https://www.bestpractices.dev/projects/8737/badge)](https://www.bestpractices.dev/projects/8737)
+
 **DPEL: Digital Production Example Library**
 A library of digital assets - 3D scenes, digital cinema footage, etc. - that demonstrate the scale and complexity of modern feature film production, including computer graphics, visual effects and animation.
 
