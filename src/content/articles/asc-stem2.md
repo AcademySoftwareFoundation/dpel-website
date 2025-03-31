@@ -117,12 +117,6 @@ downloadSection: {
           size: "54 GB",
           description: "Quicktime with stereo, 2.39 @ 4K, 100 nits ProRes422HQ, Rec709, 4096x1716",
           type: "primary"
-        },{
-          buttonText: "COMING SOON",
-          downloadUrl: "https://dpel.aswf.io/asc-stem2/#",
-          size: "X GB",
-          description: "Quicktime with stereo, 1.78 @ 8K, 1000 nits MPEG-5, Rec2020, 8192x3432",
-          type: 'disabled',
         },
       ]
   },
@@ -174,20 +168,6 @@ downloadSection: {
         description: "lossless HDR App 2E",
         type: 'primary',
       },
-      {
-        buttonText: "COMING SOON",
-        downloadUrl: "https://dpel.aswf.io/asc-stem2/#",
-        size: "X GB",
-        description: "DCDM App 4 (HTJ2K)",
-        type: 'disabled',
-      },
-      {
-        buttonText: "COMING SOON",
-        downloadUrl: "https://dpel.aswf.io/asc-stem2/#",
-        size: "X GB",
-        description: "App 5",
-        type: 'disabled',
-      }
     ]
   },
   {
