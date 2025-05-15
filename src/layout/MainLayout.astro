@@ -30,6 +30,15 @@ import { BASE_URL } from "../utils/constants";
     </header>
     <!-- Rest of the content -->
     <slot>Default Text</slot>
+    <!-- Footer -->
+    <footer id="bottom container">
+      <div class="footer-bar desktop:px-40 tablet:px-32 mobile-h:px-5 mobile-v:px-5">
+        <p> Copyright © ASWF Assets Repository a Series of LF Projects, LLC <br/>
+        For website terms of use, trademark policy, and other project policies, please see <a href="https://lfprojects.org/"> https://lfprojects.org/. </a> <br/>
+        To report a security vulnerability, please see our security guide on <a href="//github.com/AcademySoftwareFoundation/dpel-website/blob/main/SECURITY.md"><u>Github.</u></a>
+        </p>
+      </div>      
+    </footer>
   </body>
 </html>
 
@@ -64,6 +73,35 @@ import { BASE_URL } from "../utils/constants";
   .header-bar__bottom{
     background-color: #000000;
     min-height: 50px;
+  }
+
+  footer{
+    position: fixed;
+    left: 0;
+    z-index: 99999;
+    position: relative;
+    font-family: "Titillium Web", "Open Sans", sans-serif !important;
+    font-weight: 100;
+    font-size: 13px;
+    color: #9d9d9d;
+    letter-spacing: 1px;
+  }
+
+  .footer-bar{
+    background-color: #292929;
+    height: 130px;
+    display: flex;
+    justify-content: center;
+    align-items: center;     
+    text-align: center;  
+    padding: 15px;
+  }
+
+  .footer-bar a{
+    color: #31cad3 !important;
+  }
+  .footer-bar a:hover{
+    color: #FFFFFF !important;
   }
 
   .blue {
