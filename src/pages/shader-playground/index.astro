@@ -1,0 +1,15 @@
+---
+import { getEntryBySlug } from 'astro:content';
+
+import MainLayout from "../../layout/MainLayout.astro";
+import BlogPostLayout from "../../layout/BlogPostLayout4.astro";
+
+const content = await getEntryBySlug('articles', 'shader-playground');
+const crumbs = [{ text: content.data.titleAlt }];
+---
+
+<MainLayout title={content.data.title}>
+  <div class="pb-32 container mx-auto">
+    <BlogPostLayout {...content.data} crumbs={crumbs} />
+  </div>
+</MainLayout>
