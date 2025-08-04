@@ -4,7 +4,7 @@ import { getEntryBySlug } from 'astro:content';
 import MainLayout from "../../layout/MainLayout.astro";
 import BlogPostLayout from "../../layout/BlogPostLayout4.astro";
 
-const content = await getEntryBySlug('articles', 'shader-playground');
+const content = await getEntryBySlug('articles', 'openpbr-shader-playground');
 const crumbs = [{ text: content.data.titleAlt }];
 ---
 

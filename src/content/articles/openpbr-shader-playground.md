@@ -8,14 +8,14 @@ show: true
 order: 10
 # Image for the project card
 cardImage: {
-  src: "../images/shader-playground/OpenPBR_title.jpg",
+  src: "../images/openpbr-shader-playground/OpenPBR_title.jpg",
   alt: "OpenPBR Shader Playground title card",
 }
 # The buttons that will show up on the project card
 buttons: [
   {
     text: "DOWNLOADS PAGE",
-    url: "shader-playground",
+    url: "openpbr-shader-playground",
     type: "primary"
   },
 ]
@@ -37,10 +37,10 @@ title: "OpenPBR Shader Playground"
 # Used mainly for the Breadcrumbs
 titleAlt: "OpenPBR Shader Playground"
 # The url of the blog page. Please remember to add this base url before you add the rest of the url.
-url: "shader-playground"
+url: "openpbr-shader-playground"
 # The cover image of the blog page
 coverImage: {
-  src: "./images/shader-playground/OpenPBR_title.jpg",
+  src: "./images/openpbr-shader-playground/OpenPBR_title.jpg",
   alt: "OpenPBR Shader Playground",
 }
 # The image caption under the cover image
@@ -79,10 +79,10 @@ imageCaption: {
 # [] []
 # [] []
 otherImages: [
-#  "../images/shader-playground/shader-playground-meetmat-text.jpg",
-#  "../images/shader-playground/shader-playground-scissorsmug-text.jpg",
-#  "../images/shader-playground/shader-playground-paintbrushes-text.jpg",
-#  "../images/shader-playground/shader-playground-paintbrush-breakdown.gif",
+#  "../images/openpbr-shader-playground/shader-playground-meetmat-text.jpg",
+#  "../images/openpbr-shader-playground/shader-playground-scissorsmug-text.jpg",
+#  "../images/openpbr-shader-playground/shader-playground-paintbrushes-text.jpg",
+#  "../images/openpbr-shader-playground/shader-playground-paintbrush-breakdown.gif",
 ]
 
 # The download section of the blog
@@ -90,7 +90,7 @@ downloadSection: {
   title: "Downloadable Packages:",
   subtext: "By downloading any of these files, you agree to the terms of the license linked below.",
   licenseButtonText: "ASWF Asset License",
-  licenseButtonLink: "shader-playground/shader-playground-license",
+  licenseButtonLink: "openpbr-shader-playground/openpbr-shader-playground-license",
   # This header is only if the table needs a header < Please see Intel page for example of that >
   downloadTableHeader: "",
 
