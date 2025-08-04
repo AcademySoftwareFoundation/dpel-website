@@ -10,8 +10,8 @@ blogTitleAlt: "OpenPBR Shader Playground License"
 
 # Links for the buttons: Back and Home
 homePageUrl: "/"
-previousPageUrl: "/shader-playground"
-nextPageUrl: "/shader-playground/shader-playground-license"
+previousPageUrl: "/openpbr-shader-playground"
+nextPageUrl: "/openpbr-shader-playground/openpbr-shader-playground-license"
 
 # License text. Each sentence is broken up by commas.
 licenseContent: [
