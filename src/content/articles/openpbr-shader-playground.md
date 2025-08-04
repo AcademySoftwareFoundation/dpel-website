@@ -79,10 +79,10 @@ imageCaption: {
 # [] []
 # [] []
 otherImages: [
-#  "../images/openpbr-shader-playground/shader-playground-meetmat-text.jpg",
-#  "../images/openpbr-shader-playground/shader-playground-scissorsmug-text.jpg",
-#  "../images/openpbr-shader-playground/shader-playground-paintbrushes-text.jpg",
-#  "../images/openpbr-shader-playground/shader-playground-paintbrush-breakdown.gif",
+ "../images/openpbr-shader-playground/shader-playground-meetmat-text.jpg",
+ "../images/openpbr-shader-playground/shader-playground-scissorsmug-text.jpg",
+ "../images/openpbr-shader-playground/shader-playground-paintbrushes-text.jpg",
+ "../images/openpbr-shader-playground/shader-playground-paintbrush-breakdown.gif",
 ]
 
 # The download section of the blog
