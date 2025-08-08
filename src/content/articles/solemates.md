@@ -122,7 +122,7 @@ downloadSection: {
   {
     buttons: [{
       text: "DOWNLOAD",
-      url: "https://aswf-dpel-assets.s3.amazonaws.com/solemates/lighting_beauty_set_render_layer-cryptomatte_manifests-v1.0.0.zip",
+      url: "https://dpel-assets.aswf.io/solemates/lighting_beauty_set_render_layer-cryptomatte_manifests-v1.0.0.zip",
       type: "primary",
     }],
     size: "14.2 GB",
