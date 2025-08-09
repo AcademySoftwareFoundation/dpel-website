@@ -37,7 +37,7 @@ descriptionLinks: {
 # The layout file the blog page is using
 layout: "../../layout/BlogPostLayout2.astro"
 # Title of the blog page
-title: "Animal Logic ALab - Trailer"
+title: "Netflix Animation Studios ALab - Trailer"
 # Used mainly for the Breadcrumbs
 titleAlt: "ALab Trailer"
 # The url of the blog page
@@ -50,7 +50,7 @@ coverImage: {
 # The image caption under the cover image
 imageCaption: {
   # Text is separated by sections to allow text links to be added in between. <text> <link> <text>
-  text: ["Following the release of the ALab asset set, Animal Logic has released the ", " trailer as its own asset. Initially provided natively for both Avid and ", " and with full media and mixed audio, the community is encouraged to use these assets in demonstrations, training material, and in any context where timeline-based media examples would be useful. For more information, visit the ",", or join us on "],
+  text: ["Following the release of the ALab asset set, Netflix Animation Studios has released the ", " trailer as its own asset. Initially provided natively for both Avid and ", " and with full media and mixed audio, the community is encouraged to use these assets in demonstrations, training material, and in any context where timeline-based media examples would be useful. For more information, visit the ",", or join us on "],
   # Sample text links that would go in the caption if any. If not remove them like this:
   # {
   #   text: "",
@@ -66,7 +66,7 @@ imageCaption: {
     link: "https://opentimeline.io/"
   },
   {
-    text: "Animal Logic ALab website",
+    text: "Netflix Animation Studios ALab website",
     link: "https://animallogic.com/alab/"
   },
   {
