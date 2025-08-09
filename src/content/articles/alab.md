@@ -27,7 +27,7 @@ buttons: [
 # The description of the project card
 description: "A full production scene with over 300 assets and two characters, with looping animation in the first open-sourced USD scene and shot context from a studio. Supplied as three separate downloads: the full production scene, high-quality textures, and baked procedural fur and fabric for the animated characters. For more information, visit the "
 descriptionLinks: {
-  text: "Animal Logic ALab website.",
+  text: "Netflix Animation Studios ALab website.",
   url: "https://animallogic.com/alab"
 }
 
@@ -38,7 +38,7 @@ descriptionLinks: {
 # The layout file the blog page is using
 layout: "../../layout/BlogPostLayout4.astro"
 # Title of the blog page
-title: "Animal Logic ALab - USD Production Scene"
+title: "Netflix Animation Studios ALab - USD Production Scene"
 # Used mainly for the Breadcrumbs
 titleAlt: "ALab"
 # The url of the blog page
@@ -52,7 +52,7 @@ coverImage: {
 imageCaption: {
   # Text is separated by sections to allow links to be added in. <text> <link> <text>
   text: [
-    "A full production scene created by Animal Logic for exploration by the wider community to be used in demonstrations, training material, and in the testing of USD support across software and pipeline. ALab has over 300 assets, complete with high-quality textures and two characters with looping animation in shot context, expanding on the static scenes released to date. Supplied as separate downloads: the asset structure (available ", 
+    "A full production scene created by Netflix Animation Studios for exploration by the wider community to be used in demonstrations, training material, and in the testing of USD support across software and pipeline. ALab has over 300 assets, complete with high-quality textures and two characters with looping animation in shot context, expanding on the static scenes released to date. Supplied as separate downloads: the asset structure (available ", 
     " as well), geometry / rigs / shaders assets, high-quality textures, and baked procedural fur and fabric for the animated characters. For more information, visit the ",
     ", read the ",
     ", or join us on ", 
@@ -68,7 +68,7 @@ imageCaption: {
     link: "https://github.com/DigitalProductionExampleLibrary/ALab"
   },
   {
-    text: "Animal Logic ALab website",
+    text: "Netflix Animation Studios ALab website",
     link: "https://animallogic.com/alab/"
   },
   {
@@ -123,7 +123,7 @@ downloadSection: {
     size: "8.9 GB",
     description: "",
     descriptionBold: "Techvar Assets - v.2.2.0",
-    extraDescription: "Assets holding the heavy creative content from DCCs (geometry, lights, shaders, textures, rigs), which Animal Logic refers to as 'techvar assets'. Merge this with the 'Asset Structure' package to render the ALab with 1k textures and without fur & cloth.",
+    extraDescription: "Assets holding the heavy creative content from DCCs (geometry, lights, shaders, textures, rigs), which Netflix Animation Studios refers to as 'techvar assets'. Merge this with the 'Asset Structure' package to render the ALab with 1k textures and without fur & cloth.",
   },
   {
     buttons: [{
