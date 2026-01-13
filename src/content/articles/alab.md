@@ -28,7 +28,7 @@ buttons: [
 description: "A full production scene with over 300 assets and two characters, with looping animation in the first open-sourced USD scene and shot context from a studio. Supplied as three separate downloads: the full production scene, high-quality textures, and baked procedural fur and fabric for the animated characters. For more information, visit the "
 descriptionLinks: {
   text: "Netflix Animation Studios ALab website.",
-  url: "https://animallogic.com/alab"
+  url: "https://animallogic.com/technology/alab/"
 }
 
 ############################################################
@@ -69,7 +69,7 @@ imageCaption: {
   },
   {
     text: "Netflix Animation Studios ALab website",
-    link: "https://animallogic.com/alab/"
+    link: "https://animallogic.com/technology/alab/"
   },
   {
     text: "technical documentation",
