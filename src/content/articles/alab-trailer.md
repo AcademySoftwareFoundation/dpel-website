@@ -59,7 +59,7 @@ imageCaption: {
   textLinks: [
   {
     text: "promotional announcement",
-    link: "https://animallogic.com/alab/"
+    link: "https://animallogic.com/technology/alab/"
   },
   {
     text: "OpenTimelineIO",
@@ -67,7 +67,7 @@ imageCaption: {
   },
   {
     text: "Netflix Animation Studios ALab website",
-    link: "https://animallogic.com/alab/"
+    link: "https://animallogic.com/technology/alab/"
   },
   {
     text: "Slack.",
