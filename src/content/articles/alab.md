@@ -105,14 +105,14 @@ downloadSection: {
       },
       {
         text: "DOWNLOAD",
-        url: "https://github.com/DigitalProductionExampleLibrary/ALab/archive/refs/tags/v2.2.0.zip",
+        url: "https://github.com/DigitalProductionExampleLibrary/ALab/archive/refs/tags/v2.3.0.zip",
         type: "primary",
       }
     ],
     size: "294 MB",
     description: "",
     descriptionBold: "Asset Structure - v.2.2.0",
-    extraDescription: "Main asset structure for the ALab showcasing how all assets relate to each other through USD composition arcs. This is purely the USD structure linking all files, and does not include any geometry, shaders or lights.  Clone the GitHub repository, or download the Zip artifact from the GitHub Release.",
+    extraDescription: "Main asset structure for the ALab showcasing how all assets relate to each other through USD composition arcs. This is purely the USD structure linking all files, and does not include any geometry, shaders or lights.  Also includes a Gaussian Splat representation of the scene. Clone the GitHub repository, or download the Zip artifact from the GitHub Release.",
   },
   {
     buttons: [{
