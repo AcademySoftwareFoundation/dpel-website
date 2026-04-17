@@ -1,0 +1,19 @@
+---
+import { getEntryBySlug } from 'astro:content';
+
+import ASCStem3Layout from "../../layout/ASCStem3Layout.astro";
+import MainLayout from "../../layout/MainLayout.astro";
+
+const content = await getEntryBySlug('articles', 'asc-stem3');
+const crumbs = [
+  {
+    text: content.data.titleAlt,
+  },
+];
+---
+
+<MainLayout title={content.data.title}>
+  <div class="pb-32 container mx-auto">
+    <ASCStem3Layout {...content.data} crumbs={crumbs} />
+  </div>
+</MainLayout>
