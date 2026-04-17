@@ -10,7 +10,7 @@
 
 import Button from "./Button.astro";
 import "../styles/global.css"
-const {show, title, description, descriptionLinks, cardImage, buttons, url} = Astro.props;
+const {show, title, description, descriptionLinks, cardImage, buttons, url, bannerText} = Astro.props;
 ---
 {show && (
   <article class="card w-full grid gap-5 desktop:grid-cols-5 tablet:grid-cols-5 mobile-h:grid-cols-1 mobile-v:grid-cols-1 mb-20">
@@ -20,6 +20,7 @@ const {show, title, description, descriptionLinks, cardImage, buttons, url} = As
       </a>
     </div>
     <div class="desktop:col-span-3 tablet:col-span-3 mobile-h:col-span-1 mobile-v:col-span-1">
+      {bannerText && <div class="announcement-banner">{bannerText}</div>}
       <h3 class="mb-10">{title}</h3>
       <p class="mb-8 desktop:pr-5 tablet:pr-5">{description} { descriptionLinks && ( <a href={descriptionLinks.url}>{descriptionLinks.text}</a> )}</p>
       <div>
@@ -39,6 +40,20 @@ const {show, title, description, descriptionLinks, cardImage, buttons, url} = As
 )}
 
 <style>
+  .announcement-banner {
+    display: inline-block;
+    background-color: #ffffff;
+    color: #5aafc6;
+    font-family: "Titillium Web", "Open Sans", sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    padding: 8px 20px;
+    margin-bottom: 16px;
+    border: 2px solid #5aafc6;
+    border-radius: 4px;
+  }
   .card h3 {
     font-size: 38px;
     line-height: 48px;
