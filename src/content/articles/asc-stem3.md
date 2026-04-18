@@ -3,7 +3,7 @@
 # Card view on home page
 ############################################################
 # Should the project show up on the home page
-show: true
+show: false
 # The order the project card will show up on the home page
 order: 12
 # Image for the project card
