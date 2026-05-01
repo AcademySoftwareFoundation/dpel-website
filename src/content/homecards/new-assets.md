@@ -3,7 +3,7 @@
 # New Assets Card view on home page under News section
 ############################################################
 title: "New Assets"
-description: "New from Netflix Animation Studios, the NAS Sole Mates - HDR Production Example provides an ACES 2.0 and OpenEXR High Dynamic Range compositing example, and new from Adobe, the OpenPBR Shader Playground scene illustrates a new look-development paradigm using OpenPBR, MaterialX, and OpenUSD. Links below!"
+description: "Coming soon from the American Society of Cinematographers (ASC) Motion Imaging Technology Council, StEM3 provdes Standard Evaluation Material for virtual production, in-camera visual effects (ICVFX), and large LED volumes. Updated from Netflix Animation Studios, the ALab USD Scene now contains a Gaussian Splat representation. Links below!"
 link: {
   text: "",
   url: ""
